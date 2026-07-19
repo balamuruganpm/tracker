@@ -41,74 +41,404 @@ export interface SeedCourse {
 }
 
 export const seedCurriculum: SeedCourse[] = [
+  // 1. Frontend
   {
-    title: 'JavaScript Masterclass',
+    title: 'HTML Complete Course',
+    slug: 'html',
+    description: 'Learn structure, tags, elements, forms, and semantic markup.',
+    difficulty: 'Beginner',
+    estimated_hours: 15,
+    icon: 'code',
+    color: 'orange',
+    modules: [
+      {
+        title: 'HTML Fundamentals',
+        description: 'Basics of web structure.',
+        chapters: [
+          {
+            title: 'Introduction to HTML',
+            lessons: [
+              {
+                title: 'What is HTML?',
+                slug: 'what-is-html',
+                description: 'HTML is the standard markup language for creating web pages. It defines the structure of your content.',
+                estimated_minutes: 30,
+                difficulty: 'Beginner',
+                learning_objectives: ['Understand elements & tags', 'Create headers & paragraphs'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Create your first index.html file',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 20
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'CSS Complete Course',
+    slug: 'css',
+    description: 'Master styles, selectors, flexbox, grid, and layouts.',
+    difficulty: 'Beginner',
+    estimated_hours: 20,
+    icon: 'palette',
+    color: 'blue',
+    modules: [
+      {
+        title: 'CSS Styling',
+        description: 'Master margins, paddings, colors, and layout systems.',
+        chapters: [
+          {
+            title: 'CSS Basics',
+            lessons: [
+              {
+                title: 'Introduction to CSS',
+                slug: 'what-is-css',
+                description: 'CSS describes how HTML elements are to be displayed on screen, paper, or in other media.',
+                estimated_minutes: 40,
+                difficulty: 'Beginner',
+                learning_objectives: ['Understand selectors', 'Apply styles and colors'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Style your first HTML page with custom colors',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 30
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'JavaScript Complete Course',
     slug: 'javascript',
-    description: 'Master the core runtime, syntax, asynchronous loops, event queues, and functional elements of JavaScript.',
+    description: 'Master fundamentals, DOM, events, asynchronous logic, and ES6 functions.',
     difficulty: 'Intermediate',
     estimated_hours: 45,
     icon: 'js',
     color: 'yellow',
     modules: [
       {
-        title: 'Core Fundamentals',
-        description: 'Deep dive into standard variables, arrays, scope, and loops.',
+        title: 'JavaScript Fundamentals',
+        description: 'Core concepts of variables, functions, scopes, and loops.',
         chapters: [
           {
-            title: 'Scope and Closures',
-            description: 'Learn execution context, lexical scope, and closures.',
+            title: 'Introduction to JavaScript',
             lessons: [
               {
-                title: 'Lexical Scope & Scope Chain',
-                slug: 'js-lexical-scope',
-                description: 'Understand how compilation and scopes determine variable accessibility.',
+                title: 'What is JavaScript?',
+                slug: 'what-is-javascript',
+                description: `## Topics
+History of JavaScript
+Why JavaScript?
+Where JavaScript runs
+Browser vs Node.js
+ECMAScript
+JavaScript Engine
+V8 Engine
+JavaScript Runtime
+JavaScript Versions (ES5 → ES6 → ES2024)
+Why every frontend developer needs JavaScript
+
+## Theory
+JavaScript is a programming language used to make websites interactive.
+Without JavaScript:
+Button won't work
+Form won't validate
+Popup won't open
+Login won't happen
+API won't work
+HTML creates the structure.
+CSS styles it.
+JavaScript adds behavior.
+
+## Example
+HTML -> Button -> CSS -> Blue Button -> JavaScript -> When clicked, show message.
+
+## Where JavaScript Runs
+Browser: Chrome, Firefox, Edge, Safari
+Server: Node.js
+
+## What Can JavaScript Do?
+✓ Change HTML
+✓ Change CSS
+✓ Validate Forms
+✓ Fetch API
+✓ Login
+✓ Dashboard
+✓ Animation
+✓ Games
+✓ Chat
+✓ AI
+✓ Desktop Apps
+✓ Mobile Apps
+
+## Browser JavaScript
+HTML -> Browser -> JavaScript -> DOM -> Page Changes
+
+## Node.js
+JavaScript -> Node -> Backend -> Database -> API
+
+## JavaScript Engine
+Every browser has an engine.
+Chrome -> V8 Engine
+Firefox -> SpiderMonkey
+Safari -> JavaScriptCore
+
+## ECMAScript
+ECMAScript is the official standard of JavaScript.
+ES5 -> Old JavaScript
+ES6 -> Modern JavaScript (Introduced let, const, Arrow Functions, Classes, Template Literals, Modules)
+
+## Applications
+Websites
+React
+Angular
+Vue
+Node.js
+Electron
+React Native
+SPFx
+Power Apps Custom Components
+
+## Quick Notes
+JavaScript is:
+High Level Language
+Dynamic Language
+Interpreted Language
+Event Driven
+Object Oriented
+Functional Language
+
+## Interview Questions
+Q1: What is JavaScript?
+Answer: JavaScript is a scripting language used to create dynamic and interactive web applications.
+Q2: Who created JavaScript?
+Answer: Brendan Eich in 1995.
+Q3: Difference between JavaScript and ECMAScript?
+Answer: ECMAScript is the specification. JavaScript is the implementation.
+Q4: Where does JavaScript run?
+Answer: Browser and Node.js.
+Q5: Name any JavaScript engine.
+Answer: V8 Engine.
+Q6: What is Node.js?
+Answer: Node.js allows JavaScript to run outside the browser.
+Q7: Can JavaScript connect to databases?
+Answer: Yes, using backend technologies like Node.js.
+Q8: Can JavaScript create mobile apps?
+Answer: Yes. Example: React Native.
+Q9: Is JavaScript compiled?
+Answer: Modern engines use Just-In-Time (JIT) compilation.
+Q10: Why is JavaScript popular?
+Answer: Because it works everywhere, is easy to learn, and powers both frontend and backend development.
+
+## Practice Questions
+Practice 1: Write 5 real-world applications of JavaScript.
+Practice 2: Write the difference between HTML, CSS, and JavaScript.
+Practice 3: Research and write the features introduced in ES6 (at least 10).
+
+## Assignment
+Create a document answering: What is JS, Why is it needed, Browser vs Node.js, ECMAScript, JS Engines, and 10 ES6 features.
+
+## Mini Quiz
+1. JavaScript is a ______ language.
+2. Who created JavaScript?
+3. Which browser uses the V8 engine?
+4. What does ECMAScript define?
+5. Can JavaScript run outside the browser?
+6. What is Node.js used for?
+7. Name one JavaScript framework.
+8. What is the latest JavaScript standard called?
+9. What is JIT compilation?
+10. Give one use case for JavaScript on the server.`,
                 estimated_minutes: 60,
                 difficulty: 'Beginner',
-                learning_objectives: ['Define global and block scopes', 'Understand nested scope execution loops', 'Identify shadow variables'],
+                learning_objectives: ['Define core JavaScript behaviors', 'Compare Browser and Node.js Runtimes', 'Explain JS Engines'],
                 prerequisites: [],
                 tasks: [
                   {
-                    title: 'Write lexical scoping exercises',
+                    title: 'Practice 1: Write 5 real-world applications of JavaScript',
+                    task_type: 'practice',
+                    upload: false,
+                    estimated_minutes: 20
+                  },
+                  {
+                    title: 'Practice 2: Write the difference between HTML, CSS, and JavaScript',
+                    task_type: 'practice',
+                    upload: false,
+                    estimated_minutes: 20
+                  },
+                  {
+                    title: 'Assignment: Complete JavaScript Intro document',
+                    task_type: 'upload',
+                    upload: true,
+                    estimated_minutes: 40
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'React Architecture',
+    slug: 'react',
+    description: 'Learn virtual DOM, component architecture, states, and hooks.',
+    difficulty: 'Intermediate',
+    estimated_hours: 30,
+    icon: 'atom',
+    color: 'cyan',
+    modules: [
+      {
+        title: 'React Core',
+        description: 'Fundamentals of React components.',
+        chapters: [
+          {
+            title: 'Components & State',
+            lessons: [
+              {
+                title: 'Introduction to React Hooks',
+                slug: 'react-hooks-intro',
+                description: 'Learn useState and useEffect for functional stateful components.',
+                estimated_minutes: 60,
+                difficulty: 'Intermediate',
+                learning_objectives: ['Manage local state', 'Trigger side effects'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Create a dynamic counter component',
                     task_type: 'coding',
                     upload: true,
                     estimated_minutes: 30
                   }
                 ]
-              },
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'TypeScript Complete',
+    slug: 'typescript',
+    description: 'Statically typed JavaScript helper rules, generic values, and mapped types.',
+    difficulty: 'Intermediate',
+    estimated_hours: 20,
+    icon: 'shield',
+    color: 'sky',
+    modules: [
+      {
+        title: 'Strict Types',
+        description: 'Introduction to types and interfaces.',
+        chapters: [
+          {
+            title: 'Core Typing',
+            lessons: [
               {
-                title: 'Closures in Practice',
-                slug: 'js-closures-practice',
-                description: 'Learn to use closures for private states, helper factories, and memorization cache layers.',
-                estimated_minutes: 90,
+                title: 'Types vs Interfaces',
+                slug: 'types-vs-interfaces',
+                description: 'Understand the syntax difference and extendability features.',
+                estimated_minutes: 45,
                 difficulty: 'Intermediate',
-                learning_objectives: ['Define private state variables', 'Build module patterns using closures', 'Handle memory allocation checks'],
-                prerequisites: ['js-lexical-scope'],
+                learning_objectives: ['Define custom types', 'Extend interfaces'],
+                prerequisites: [],
                 tasks: [
                   {
-                    title: 'Create a stateful counter factory program',
+                    title: 'Build strict interfaces for a user profile object',
                     task_type: 'coding',
                     upload: true,
-                    estimated_minutes: 45
+                    estimated_minutes: 30
                   }
                 ]
               }
             ]
-          },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Next.js Architecture',
+    slug: 'nextjs',
+    description: 'Master file-based App Router routing, server/client components, and APIs.',
+    difficulty: 'Advanced',
+    estimated_hours: 35,
+    icon: 'globe',
+    color: 'zinc',
+    modules: [
+      {
+        title: 'Next App Router',
+        description: 'Server side rendering & routing configurations.',
+        chapters: [
           {
-            title: 'Asynchronous JavaScript',
-            description: 'Promises, Async/Await, and Web APIs.',
+            title: 'Dynamic Routing',
             lessons: [
               {
-                title: 'The Event Loop & Call Stack',
-                slug: 'js-event-loop',
-                description: 'Deconstruct how JavaScript handles concurrency, microtasks, and macrotasks.',
-                estimated_minutes: 120,
+                title: 'App Router Layouts & Pages',
+                slug: 'nextjs-layouts-pages',
+                description: 'Create nested routes and custom layouts.',
+                estimated_minutes: 70,
                 difficulty: 'Advanced',
-                learning_objectives: ['Differentiate macro and micro task queues', 'Trace call stack executions', 'Avoid blocking CPU threads'],
-                prerequisites: ['js-closures-practice'],
+                learning_objectives: ['Implement layouts', 'Build custom route handlers'],
+                prerequisites: [],
                 tasks: [
                   {
-                    title: 'Map a visual sequence of setTimeout vs Promise tasks',
+                    title: 'Design a nested route configuration',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 40
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  // 2. Microsoft 365 Development
+  {
+    title: 'SharePoint Online',
+    slug: 'sharepoint-online',
+    description: 'Lists creation, document libraries mapping, custom columns, views, and schemas.',
+    difficulty: 'Beginner',
+    estimated_hours: 20,
+    icon: 'sharepoint',
+    color: 'green',
+    modules: [
+      {
+        title: 'SharePoint Configuration',
+        description: 'Tenant setups, schemas, site groups.',
+        chapters: [
+          {
+            title: 'SPO Lists & Document Libraries',
+            lessons: [
+              {
+                title: 'SPO List Schema Definitions',
+                slug: 'spo-list-schemas',
+                description: 'Define fields, choice columns, lookups, and views.',
+                estimated_minutes: 50,
+                difficulty: 'Beginner',
+                learning_objectives: ['Create custom columns', 'Create SPO lookup views'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Provision custom SPO lists for employee database',
                     task_type: 'practice',
                     upload: true,
                     estimated_minutes: 40
@@ -122,50 +452,71 @@ export const seedCurriculum: SeedCourse[] = [
     ]
   },
   {
-    title: 'Modern React Architecture',
-    slug: 'react',
-    description: 'Learn hooks lifecycles, virtual DOM mechanics, performance tuning, rendering optimization, and advanced patterns.',
-    difficulty: 'Intermediate',
-    estimated_hours: 60,
-    icon: 'react',
-    color: 'cyan',
+    title: 'SharePoint Framework (SPFx)',
+    slug: 'spfx',
+    description: 'Enterprise customization of custom web parts using SPFx Yeoman generators.',
+    difficulty: 'Advanced',
+    estimated_hours: 40,
+    icon: 'terminal',
+    color: 'teal',
     modules: [
       {
-        title: 'Core Engine & Hooks',
-        description: 'Master rendering life-cycles, reconciliation, state queues, and side effects.',
+        title: 'SPFx Components',
+        description: 'Properties panes and extensions.',
         chapters: [
           {
-            title: 'State and Effects',
-            description: 'Hooks usage patterns, dependencies, and synchronization.',
+            title: 'Client Web Parts',
             lessons: [
               {
-                title: 'Reconciliation & Virtual DOM',
-                slug: 'react-reconciliation-vdom',
-                description: 'How React updates the DOM tree efficiently using diffing algorithms.',
-                estimated_minutes: 90,
-                difficulty: 'Intermediate',
-                learning_objectives: ['Understand key attribute dependencies', 'Explore component render phases', 'Analyze fiber nodes'],
+                title: 'Build SPFx Client Web Parts',
+                slug: 'spfx-client-webparts',
+                description: 'Install dependencies and build SPFx webparts with React.',
+                estimated_minutes: 120,
+                difficulty: 'Advanced',
+                learning_objectives: ['Run Yeoman generator', 'Define property pane parameters'],
                 prerequisites: [],
                 tasks: [
                   {
-                    title: 'Demonstrate component re-render loops',
-                    task_type: 'practice',
+                    title: 'Build custom SPFx layout view web part',
+                    task_type: 'coding',
                     upload: true,
-                    estimated_minutes: 30
+                    estimated_minutes: 80
                   }
                 ]
-              },
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'PnP JS Library',
+    slug: 'pnpjs',
+    description: 'Learn simple querying commands for SPO lists, attachments, and profiles.',
+    difficulty: 'Intermediate',
+    estimated_hours: 20,
+    icon: 'link',
+    color: 'sky',
+    modules: [
+      {
+        title: 'PnPJS Integration',
+        description: 'SPO CRUD actions.',
+        chapters: [
+          {
+            title: 'PnPJS SPO Operations',
+            lessons: [
               {
-                title: 'Custom Hooks Factory',
-                slug: 'react-custom-hooks-factory',
-                description: 'Extract stateful components logic into reusable React Hooks.',
-                estimated_minutes: 120,
+                title: 'SPO Item CRUD Actions',
+                slug: 'pnpjs-spo-crud',
+                description: 'Retrieve, create, edit, and delete list items using PnPJS.',
+                estimated_minutes: 90,
                 difficulty: 'Intermediate',
-                learning_objectives: ['Encapsulate fetch actions', 'Handle debounce logic in custom hooks', 'Synchronize states across render layers'],
-                prerequisites: ['react-reconciliation-vdom'],
+                learning_objectives: ['Query lists using PnPJS sp.web.lists', 'Execute batch updates'],
+                prerequisites: [],
                 tasks: [
                   {
-                    title: 'Develop a useDebounce hook component',
+                    title: 'Build a list CRUD operations dashboard helper',
                     task_type: 'coding',
                     upload: true,
                     estimated_minutes: 60
@@ -179,34 +530,113 @@ export const seedCurriculum: SeedCourse[] = [
     ]
   },
   {
-    title: 'TypeScript Advanced Types',
-    slug: 'typescript',
-    description: 'Strict type verifications, generics mapping, conditional definitions, utility helpers, and configurations.',
+    title: 'Microsoft Graph API',
+    slug: 'msgraph',
+    description: 'Authorize client tokens to read User profiles, Outlook calendar logs, and MS Teams details.',
     difficulty: 'Advanced',
-    estimated_hours: 35,
-    icon: 'ts',
-    color: 'sky',
+    estimated_hours: 25,
+    icon: 'user-check',
+    color: 'indigo',
     modules: [
       {
-        title: 'Generics & Utilities',
-        description: 'Build reusable interfaces, utility definitions, and union checks.',
+        title: 'Graph API Authentication',
+        description: 'Microsoft Entra integrations.',
         chapters: [
           {
-            title: 'Advanced Type Mapping',
-            description: 'Conditional checking, generic constraints, and infer operations.',
+            title: 'Graph SDK Queries',
             lessons: [
               {
-                title: 'Generic Constraints & Infer',
-                slug: 'ts-generics-infer',
-                description: 'Design flexible functions using dynamic constraints and return value type infers.',
+                title: 'Querying User Profiles via Graph',
+                slug: 'msgraph-user-query',
+                description: 'Authenticate and fetch tenant profiles using Graph SDK client.',
                 estimated_minutes: 100,
                 difficulty: 'Advanced',
-                learning_objectives: ['Apply extends constraints to generic values', 'Infer object parameter parameters', 'Build mapped interfaces'],
+                learning_objectives: ['Request tenant tokens', 'Decode Microsoft Graph user payload'],
                 prerequisites: [],
                 tasks: [
                   {
-                    title: 'Implement generic array transformer functions',
+                    title: 'Fetch user profile payload',
                     task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 50
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  // 3. Power Platform
+  {
+    title: 'Power Apps Complete',
+    slug: 'power-apps',
+    description: 'Design canvas layout pages, custom galleries, properties binding, variables, and Dataverse inputs.',
+    difficulty: 'Intermediate',
+    estimated_hours: 30,
+    icon: 'layout',
+    color: 'pink',
+    modules: [
+      {
+        title: 'Canvas Applications',
+        description: 'App creation, formulas, collections.',
+        chapters: [
+          {
+            title: 'Gallery Binding & State',
+            lessons: [
+              {
+                title: 'Galleries Data Binding',
+                slug: 'powerapps-gallery-binding',
+                description: 'Bind SharePoint lists and Dataverse entities to galleries.',
+                estimated_minutes: 90,
+                difficulty: 'Intermediate',
+                learning_objectives: ['Bind Data Sources', 'Design custom cards layout'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Design customer ticket gallery layout',
+                    task_type: 'practice',
+                    upload: true,
+                    estimated_minutes: 60
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Power Automate Cloud',
+    slug: 'power-automate-cloud',
+    description: 'Trigger workflows, scheduled loops, custom JSON responses, and approval templates.',
+    difficulty: 'Intermediate',
+    estimated_hours: 25,
+    icon: 'cloud',
+    color: 'indigo',
+    modules: [
+      {
+        title: 'Cloud Triggers',
+        description: 'Automated triggers, loops, approvals.',
+        chapters: [
+          {
+            title: 'Approval Flows',
+            lessons: [
+              {
+                title: 'SPO Approval System Flow',
+                slug: 'pao-approval-systems',
+                description: 'Trigger flow when items are added and execute approval loops.',
+                estimated_minutes: 90,
+                difficulty: 'Intermediate',
+                learning_objectives: ['Trigger approval steps', 'Handle response conditionals'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Build employee leave approval flow',
+                    task_type: 'practice',
                     upload: true,
                     estimated_minutes: 45
                   }
@@ -219,113 +649,32 @@ export const seedCurriculum: SeedCourse[] = [
     ]
   },
   {
-    title: 'SharePoint Framework (SPFx)',
-    slug: 'spfx',
-    description: 'Build enterprise-grade SPFx web parts, extensions, Graph API integrations, PnPJS templates, and teams models.',
-    difficulty: 'Advanced',
-    estimated_hours: 50,
-    icon: 'sharepoint',
-    color: 'teal',
-    modules: [
-      {
-        title: 'Enterprise Customization',
-        description: 'Build SPFx web parts and extensions connected to Microsoft Graph.',
-        chapters: [
-          {
-            title: 'SPFx Core Web Parts',
-            description: 'Properties pane, Yeoman templates, dynamic settings.',
-            lessons: [
-              {
-                title: 'Microsoft Graph Integration',
-                slug: 'spfx-microsoft-graph',
-                description: 'Query tenant data using MSGraphClient and SPHttpClient structures.',
-                estimated_minutes: 180,
-                difficulty: 'Advanced',
-                learning_objectives: ['Verify Azure AD registration permissions', 'Query user profiles using Graph', 'Format cards dynamically in web parts'],
-                prerequisites: [],
-                tasks: [
-                  {
-                    title: 'Build a tenant profile lookup web part',
-                    task_type: 'upload',
-                    upload: true,
-                    estimated_minutes: 120
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: 'Power Apps Canvas & Model Driven',
-    slug: 'power-apps',
-    description: 'Design canvas pages, galleries mapping, Dataverse configurations, variables lifecycle, and formulas.',
-    difficulty: 'Intermediate',
-    estimated_hours: 45,
-    icon: 'layout',
-    color: 'pink',
-    modules: [
-      {
-        title: 'App Construction',
-        description: 'Canvas layout design, collections, performance, and variables.',
-        chapters: [
-          {
-            title: 'State & Variables',
-            description: 'Global vs context variables, collections, and delegations.',
-            lessons: [
-              {
-                title: 'Variable Scopes & ClearCollect',
-                slug: 'powerapps-state-variables',
-                description: 'Manage canvas application state via Set, UpdateContext, and Collections.',
-                estimated_minutes: 120,
-                difficulty: 'Intermediate',
-                learning_objectives: ['Implement Context vs Global variables', 'Build multi-item local Collections', 'Perform search validations'],
-                prerequisites: [],
-                tasks: [
-                  {
-                    title: 'Create an offline invoice collection dashboard',
-                    task_type: 'practice',
-                    upload: true,
-                    estimated_minutes: 80
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: 'Power Automate Desktop (RPA)',
+    title: 'Power Automate Desktop',
     slug: 'power-automate-desktop',
-    description: 'Construct UI flows, system loops, Excel automation, web parsing processes, and desktop scripts.',
+    description: 'Automate tasks, Excel parsing loops, file handlers, browser interactions, and systems scripting.',
     difficulty: 'Intermediate',
-    estimated_hours: 40,
+    estimated_hours: 30,
     icon: 'cpu',
     color: 'purple',
     modules: [
       {
-        title: 'RPA Flows',
-        description: 'UI recording, Excel parsing, file handlers, and desktop automation.',
+        title: 'RPA Automation',
+        description: 'RPA Excel, file processing.',
         chapters: [
           {
-            title: 'Excel Data Extraction',
-            description: 'Read spreadsheets, process cell data, and insert logs.',
+            title: 'RPA Excel Operations',
             lessons: [
               {
-                title: 'Excel Data Extraction Loops',
-                slug: 'pad-excel-data-extraction',
-                description: 'Open files, extract columns, apply transformations, and write results.',
-                estimated_minutes: 100,
+                title: 'RPA Spreadsheet Parsing Loops',
+                slug: 'pad-excel-parsing',
+                description: 'Load spreadsheets, loop rows, map cells, and write logs.',
+                estimated_minutes: 90,
                 difficulty: 'Intermediate',
-                learning_objectives: ['Launch Excel flows', 'Parse cells into DataTables', 'Loop rows applying conditional validation'],
+                learning_objectives: ['Launch Excel flows', 'Parse cells into DataTables'],
                 prerequisites: [],
                 tasks: [
                   {
-                    title: 'Build Excel customer list extraction RPA script',
+                    title: 'Build Excel lists extraction RPA flow',
                     task_type: 'practice',
                     upload: true,
                     estimated_minutes: 50
@@ -339,36 +688,351 @@ export const seedCurriculum: SeedCourse[] = [
     ]
   },
   {
-    title: 'Power Automate Online (Cloud)',
-    slug: 'power-automate-online',
-    description: 'Create automated, scheduled, and instant cloud flows with custom connectors, triggers, variables, and JSON parsers.',
-    difficulty: 'Intermediate',
-    estimated_hours: 40,
-    icon: 'cloud',
-    color: 'indigo',
+    title: 'Dataverse Customization',
+    slug: 'dataverse',
+    description: 'Configure custom tables, relationships mapping, fields validations, security groups, and rules.',
+    difficulty: 'Advanced',
+    estimated_hours: 25,
+    icon: 'database',
+    color: 'violet',
     modules: [
       {
-        title: 'Cloud Workflows',
-        description: 'Triggers, custom connectors, loops, and conditions.',
+        title: 'Dataverse Tables',
+        description: 'Relations, security, permissions.',
         chapters: [
           {
-            title: 'JSON Parsing & Loops',
-            description: 'Read payloads, extract attributes, and run loops.',
+            title: 'Entity Customization',
             lessons: [
               {
-                title: 'Parse JSON in Cloud Flows',
-                slug: 'pao-parse-json-flows',
-                description: 'Trigger flow on web requests, parse body JSON, and loop attributes.',
-                estimated_minutes: 90,
-                difficulty: 'Intermediate',
-                learning_objectives: ['Configure request triggers', 'Generate JSON schemas', 'Perform Apply to Each iterations'],
+                title: 'Relations Mapping (1:N, N:N)',
+                slug: 'dataverse-relations',
+                description: 'Design robust schemas with custom relationships and lookups.',
+                estimated_minutes: 80,
+                difficulty: 'Advanced',
+                learning_objectives: ['Establish lookups', 'Implement cascade settings'],
                 prerequisites: [],
                 tasks: [
                   {
-                    title: 'Build automated email payload parser flow',
+                    title: 'Construct project tables relations schema',
                     task_type: 'practice',
                     upload: true,
-                    estimated_minutes: 45
+                    estimated_minutes: 40
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  // 4. Microsoft Identity & DevOps
+  {
+    title: 'Microsoft Entra ID (Azure AD)',
+    slug: 'entra-id',
+    description: 'Authentication setup, app registrations configuration, OAuth scopes, and tenant directory permissions.',
+    difficulty: 'Advanced',
+    estimated_hours: 20,
+    icon: 'key',
+    color: 'emerald',
+    modules: [
+      {
+        title: 'Entra Registrations',
+        description: 'OAuth scopes, API permissions.',
+        chapters: [
+          {
+            title: 'App Registrations',
+            lessons: [
+              {
+                title: 'Configure OAuth Scopes',
+                slug: 'entra-app-registrations',
+                description: 'Register apps, configure permissions, and generate client secrets.',
+                estimated_minutes: 90,
+                difficulty: 'Advanced',
+                learning_objectives: ['Register Azure AD apps', 'Grant API admin consents'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Configure Entra ID app registration secrets',
+                    task_type: 'practice',
+                    upload: true,
+                    estimated_minutes: 40
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Power BI Fundamentals',
+    slug: 'power-bi',
+    description: 'Visualize data dashboards, DAX queries, fields mapping, and custom graphics reports.',
+    difficulty: 'Intermediate',
+    estimated_hours: 20,
+    icon: 'bar-chart-2',
+    color: 'yellow',
+    modules: [
+      {
+        title: 'Power BI Reports',
+        description: 'DAX formulas, dashboards compilation.',
+        chapters: [
+          {
+            title: 'DAX Analytics',
+            lessons: [
+              {
+                title: 'DAX Formulas & Relationships',
+                slug: 'powerbi-dax-relationships',
+                description: 'Write custom DAX columns and calculate filters.',
+                estimated_minutes: 90,
+                difficulty: 'Intermediate',
+                learning_objectives: ['Create custom metrics', 'Apply filters inside DAX'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Build Sales performance DAX dashboard',
+                    task_type: 'practice',
+                    upload: true,
+                    estimated_minutes: 50
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Azure Fundamentals (AZ-900)',
+    slug: 'azure-fundamentals',
+    description: 'Core cloud services definitions, storage accounts configuration, and networking groups.',
+    difficulty: 'Beginner',
+    estimated_hours: 15,
+    icon: 'cloud-lightning',
+    color: 'sky',
+    modules: [
+      {
+        title: 'Azure Cloud Core',
+        description: 'VMs, storage accounts, groups.',
+        chapters: [
+          {
+            title: 'Azure Storage & Security',
+            lessons: [
+              {
+                title: 'Provision Storage Accounts',
+                slug: 'az-storage-accounts',
+                description: 'Establish containers, configure SAS tokens, and verify permissions.',
+                estimated_minutes: 60,
+                difficulty: 'Beginner',
+                learning_objectives: ['Create storage containers', 'Generate SAS keys'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Provision secure blob storage account',
+                    task_type: 'practice',
+                    upload: true,
+                    estimated_minutes: 30
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Azure DevOps Services',
+    slug: 'azure-devops',
+    description: 'Git repository setups, Boards configurations, Pipelines CI/CD builds, and work items tracker.',
+    difficulty: 'Advanced',
+    estimated_hours: 25,
+    icon: 'git-branch',
+    color: 'indigo',
+    modules: [
+      {
+        title: 'DevOps Pipelines',
+        description: 'CI/CD YAML files, repositories, boards.',
+        chapters: [
+          {
+            title: 'YAML Builds & Boards',
+            lessons: [
+              {
+                title: 'Build CI/CD Pipelines with YAML',
+                slug: 'devops-ci-cd-pipelines',
+                description: 'Configure automated YAML trigger builds and deployment steps.',
+                estimated_minutes: 100,
+                difficulty: 'Advanced',
+                learning_objectives: ['Define YAML pipeline triggers', 'Configure deployment pools'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Build continuous integration YAML flow',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 50
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  // 5. Capstone Projects
+  {
+    title: 'Microsoft 365 Employee Portal',
+    slug: 'm365-employee-portal',
+    description: 'Deploy SPFx webparts dashboard integrated with Entra ID profiles and Microsoft Graph.',
+    difficulty: 'Advanced',
+    estimated_hours: 40,
+    icon: 'user-plus',
+    color: 'teal',
+    modules: [
+      {
+        title: 'Project Construction',
+        description: 'Integrate SharePoint documents, profiles lookup, and dynamic notifications.',
+        chapters: [
+          {
+            title: 'Core Intranet Portal Deployment',
+            lessons: [
+              {
+                title: 'Build Portal Dashboard Layout',
+                slug: 'build-portal-layout',
+                description: 'Assemble all SPFx webparts into a single active employee portal dashboard.',
+                estimated_minutes: 240,
+                difficulty: 'Advanced',
+                learning_objectives: ['Deploy web parts', 'Configure tenant permissions'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Complete and deploy Employee Portal project',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 180
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'HR Management System',
+    slug: 'hr-management-system',
+    description: 'Assemble canvas layout pages, custom list databases, approval workflows, and roles permissions.',
+    difficulty: 'Intermediate',
+    estimated_hours: 35,
+    icon: 'users',
+    color: 'pink',
+    modules: [
+      {
+        title: 'HR App Portal',
+        description: 'Employee onboarding checklists, leave approvals, and profiles databases.',
+        chapters: [
+          {
+            title: 'Onboarding & Approvals',
+            lessons: [
+              {
+                title: 'Build Onboarding Workflows App',
+                slug: 'build-hr-app',
+                description: 'Integrate leave approvals cloud flows with Power Apps dashboards.',
+                estimated_minutes: 200,
+                difficulty: 'Intermediate',
+                learning_objectives: ['Link approvals', 'Format custom gallery cards'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Deploy HR onboarding canvas application',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 120
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Learning Management System',
+    slug: 'learning-management-system',
+    description: 'Create training outline portals, tasks tracking checklists, and certificates verification databases.',
+    difficulty: 'Intermediate',
+    estimated_hours: 35,
+    icon: 'book',
+    color: 'purple',
+    modules: [
+      {
+        title: 'LMS Application',
+        description: 'Track course modules, progress percentages, and download credentials.',
+        chapters: [
+          {
+            title: 'Course Outline Tracker',
+            lessons: [
+              {
+                title: 'Build Progress Tracking Dashboard',
+                slug: 'build-lms-tracker',
+                description: 'Implement user progress checklists with certificates generation logic.',
+                estimated_minutes: 180,
+                difficulty: 'Intermediate',
+                learning_objectives: ['Query progress logs', 'Generate certificates'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Submit training LMS dashboard program',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 120
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Enterprise Intranet Portal',
+    slug: 'enterprise-intranet-portal',
+    description: 'Consolidate multiple SPO document libraries, search filters, Entra groups, and approvals in a secure site.',
+    difficulty: 'Advanced',
+    estimated_hours: 50,
+    icon: 'layout',
+    color: 'blue',
+    modules: [
+      {
+        title: 'Intranet Architecture',
+        description: 'Search configurations, document management schemas, security policies.',
+        chapters: [
+          {
+            title: 'Intranet Deployment',
+            lessons: [
+              {
+                title: 'Consolidate Enterprise Sites Layout',
+                slug: 'build-intranet-portal',
+                description: 'Link department sites and configure global navigation headers.',
+                estimated_minutes: 300,
+                difficulty: 'Advanced',
+                learning_objectives: ['Configure global navigation', 'Deploy SPO security groups'],
+                prerequisites: [],
+                tasks: [
+                  {
+                    title: 'Deploy final Intranet Portal layout',
+                    task_type: 'coding',
+                    upload: true,
+                    estimated_minutes: 240
                   }
                 ]
               }

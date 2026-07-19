@@ -1,0 +1,261 @@
+Power Apps Master Course (Beginner → Enterprise)
+Module 1 – Introduction to Power Apps
+Chapter 1 – Power Apps Fundamentals
+What is Power Apps?
+Microsoft Power Platform Overview
+Why Power Apps?
+Types of Power Apps
+Canvas Apps
+Model-Driven Apps
+Power Pages
+AI Builder
+Licensing
+Real-world Use Cases
+Module 2 – Environment Setup
+Chapter 2
+Microsoft 365 Developer Account
+Power Platform Environment
+Create Environment
+Default Environment
+Solutions
+Makers Portal
+Admin Center
+Environment Variables
+Module 3 – Canvas Apps
+Chapter 3
+Create Canvas App
+Blank App
+Template App
+Tablet Layout
+Mobile Layout
+Responsive Layout
+App Settings
+App Preview
+Module 4 – User Interface
+Chapter 4
+Labels
+Buttons
+Icons
+Images
+Containers
+Forms
+Galleries
+Cards
+Navigation Menu
+Responsive Containers
+Module 5 – Variables
+Chapter 5
+Global Variables
+Context Variables
+Collections
+Set()
+UpdateContext()
+ClearCollect()
+Remove()
+Patch()
+Module 6 – Power Fx
+Chapter 6
+Power Fx Introduction
+If()
+Switch()
+Filter()
+Search()
+LookUp()
+Sort()
+Distinct()
+CountRows()
+With()
+Chapter 7 – Advanced Power Fx
+Patch()
+Concurrent()
+ForAll()
+Sequence()
+JSON()
+ParseJSON()
+Date Functions
+Time Functions
+Text Functions
+Math Functions
+Module 7 – Data Sources
+Chapter 8
+SharePoint Lists
+Dataverse
+SQL Server
+Excel
+OneDrive
+Microsoft Lists
+Custom Connector
+Azure SQL
+Module 8 – CRUD Operations
+Chapter 9
+Create Record
+Read Record
+Update Record
+Delete Record
+Validation
+Error Handling
+Offline Data
+Synchronization
+Module 9 – Forms
+Chapter 10
+Display Form
+Edit Form
+New Form
+SubmitForm()
+ResetForm()
+Validation
+Required Fields
+Attachments
+Module 10 – Navigation
+Chapter 11
+Navigate()
+Back()
+Parameters
+Multiple Screens
+Menus
+Deep Linking
+Module 11 – Components
+Chapter 12
+Components
+Component Library
+Reusable Controls
+Custom Properties
+Component Events
+Responsive Components
+Module 12 – Collections
+Chapter 13
+Create Collection
+Update Collection
+Remove Collection
+Clear Collection
+JSON Collections
+Temporary Data
+Module 13 – SharePoint Integration
+Chapter 14
+SharePoint Lists
+Document Libraries
+Attachments
+Choice Fields
+Person Fields
+Lookup Fields
+Metadata
+Permissions
+Module 14 – Dataverse
+Chapter 15
+Tables
+Columns
+Relationships
+Choice Columns
+Business Rules
+Security Roles
+CRUD
+Performance
+Module 15 – Microsoft 365 Connectors
+Chapter 16
+Office 365 Users
+Outlook
+Teams
+Calendar
+OneDrive
+Excel
+Planner
+Approvals
+Module 16 – Power Automate Integration
+Chapter 17
+Trigger Flow
+Pass Parameters
+Receive Response
+Approval Flow
+Email Flow
+Notifications
+Error Handling
+Module 17 – Custom Connectors
+Chapter 18
+REST APIs
+OpenAPI
+Authentication
+Testing
+Publishing
+Versioning
+Module 18 – AI Builder
+Chapter 19
+AI Builder Overview
+Form Processing
+Object Detection
+Prediction Models
+AI Prompts
+AI Integration
+Module 19 – Security
+Chapter 20
+User Roles
+Environment Security
+Data Loss Prevention
+Permissions
+Sharing Apps
+Governance
+Module 20 – Performance
+Chapter 21
+Delegation
+Delegation Warnings
+Performance Optimization
+Concurrent()
+Caching
+Loading Indicators
+Module 21 – ALM (Application Lifecycle Management)
+Chapter 22
+Solutions
+Managed Solutions
+Unmanaged Solutions
+Export
+Import
+Pipelines
+Version Control
+Deployment
+Module 22 – Testing
+Chapter 23
+Manual Testing
+Test Studio
+Debugging
+Monitor Tool
+Performance Testing
+Error Logging
+Module 23 – Enterprise Architecture
+Chapter 24
+Naming Conventions
+Folder Structure
+Component Libraries
+Environment Variables
+Solution Design
+Reusable Logic
+Governance
+Best Practices
+Module 24 – Real Projects
+Chapter 25 – Beginner Projects
+Employee Directory
+Leave Request App
+Attendance App
+Expense Tracker
+Contact Manager
+Chapter 26 – Intermediate Projects
+Inventory Management
+Help Desk System
+Asset Tracking
+Project Tracker
+Student Management
+Chapter 27 – Enterprise Projects
+HR Management System
+Employee Onboarding
+Visitor Management
+Document Approval System
+CRM Dashboard
+Learning Management System
+Final Revision
+250+ Power Apps Interview Questions
+200+ Power Fx Exercises
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Exercises
+15 Assignments
+10 Mini Projects
+5 Intermediate Projects
+5 Enterprise Projects

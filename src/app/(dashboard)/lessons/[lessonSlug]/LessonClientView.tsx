@@ -27,6 +27,150 @@ interface LessonClientViewProps {
   userId: string
 }
 
+function RichLessonContent({ content }: { content: string }) {
+  const [openQA, setOpenQA] = useState<Record<string, boolean>>({})
+  const [showQuizAnswers, setShowQuizAnswers] = useState(false)
+
+  if (!content) return null
+
+  // Parser
+  const lines = content.split('\n')
+  const sections: { type: string; title: string; items: string[] }[] = []
+  let currentSection: { type: string; title: string; items: string[] } | null = null
+
+  const headerKeywords = [
+    'topics', 'theory', 'example', 'where javascript runs', 
+    'what can javascript do', 'browser javascript', 'node.js', 
+    'javascript engine', 'v8 engine', 'javascript runtime',
+    'ecmascript', 'applications', 'quick notes', 'interview questions', 
+    'practice questions', 'assignment', 'mini quiz'
+  ]
+
+  lines.forEach((line) => {
+    const trimmed = line.trim()
+    if (!trimmed) return
+
+    const lowerTrimmed = trimmed.toLowerCase().replace('## ', '')
+    const isHeader = trimmed.startsWith('## ') || headerKeywords.some(keyword => lowerTrimmed === keyword)
+
+    if (isHeader) {
+      const title = trimmed.replace('## ', '')
+      let type = 'general'
+      if (title.toLowerCase().includes('interview')) type = 'qa'
+      else if (title.toLowerCase().includes('practice')) type = 'practice'
+      else if (title.toLowerCase().includes('quiz')) type = 'quiz'
+      else if (title.toLowerCase().includes('assignment')) type = 'assignment'
+      else if (title.toLowerCase().includes('quick notes') || title.toLowerCase().includes('note')) type = 'note'
+      else if (title.toLowerCase().includes('example') || title.toLowerCase().includes('html')) type = 'example'
+      else if (title.toLowerCase().includes('topics')) type = 'topics'
+      
+      currentSection = { type, title, items: [] }
+      sections.push(currentSection)
+    } else {
+      if (!currentSection) {
+        currentSection = { type: 'general', title: 'Introduction', items: [] }
+        sections.push(currentSection)
+      }
+      currentSection.items.push(trimmed)
+    }
+  })
+
+  return (
+    <div className="space-y-6">
+      {sections.map((section, sIdx) => {
+        if (section.type === 'topics') {
+          return (
+            <div key={sIdx} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+              <h3 className="font-bold text-slate-900 text-sm mb-4 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-blue-600"></span>
+                {section.title}
+              </h3>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {section.items.map((item, i) => (
+                  <div key={i} className="flex items-center space-x-2 text-sm text-slate-600 bg-slate-50/50 rounded-lg p-2.5 border border-slate-100/50">
+                    <span className="text-emerald-500 font-bold">✓</span>
+                    <span>{item.replace(/^[✓\s*-\s]+/, '')}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        }
+
+        if (section.type === 'qa') {
+          return (
+            <div key={sIdx} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-4">
+              <h3 className="font-bold text-slate-900 text-sm">{section.title}</h3>
+              <div className="space-y-3">
+                {section.items.map((item, i) => {
+                  if (item.startsWith('Q')) {
+                    const id = `${sIdx}-${i}`
+                    const answer = section.items[i + 1] || ''
+                    return (
+                      <div key={i} className="border border-slate-100 rounded-xl overflow-hidden">
+                        <button
+                          onClick={() => setOpenQA(prev => ({ ...prev, [id]: !prev[id] }))}
+                          className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-slate-700 bg-slate-50/30 hover:bg-slate-50 transition-colors"
+                        >
+                          <span>{item}</span>
+                          <span className="text-xs text-blue-600 font-bold">{openQA[id] ? 'Hide Answer' : 'Show Answer'}</span>
+                        </button>
+                        {openQA[id] && (
+                          <div className="p-4 text-xs font-semibold leading-relaxed text-slate-600 border-t border-slate-100 bg-white">
+                            {answer.replace('Answer: ', '')}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  }
+                  return null
+                })}
+              </div>
+            </div>
+          )
+        }
+
+        if (section.type === 'quiz') {
+          return (
+            <div key={sIdx} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-slate-50 pb-2">
+                <h3 className="font-bold text-slate-900 text-sm">{section.title}</h3>
+                <button
+                  onClick={() => setShowQuizAnswers(!showQuizAnswers)}
+                  className="text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  {showQuizAnswers ? 'Hide Answers' : 'Reveal Answers'}
+                </button>
+              </div>
+              <div className="space-y-3 text-xs font-semibold text-slate-600">
+                {section.items.map((item, i) => (
+                  <div key={i} className="p-3 bg-slate-50/50 rounded-xl border border-slate-100/50 space-y-2">
+                    <p className="font-bold text-slate-800">{item}</p>
+                    {showQuizAnswers && (
+                      <p className="text-emerald-600 font-bold uppercase tracking-wider text-[9px] mt-1">&rarr; Answer key active</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        }
+
+        return (
+          <div key={sIdx} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-3">
+            <h3 className="font-bold text-slate-900 text-sm">{section.title}</h3>
+            <div className="text-xs font-semibold leading-relaxed text-slate-600 space-y-2">
+              {section.items.map((item, i) => (
+                <p key={i}>{item}</p>
+              ))}
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function LessonClientView({
   lesson,
   resources,
@@ -36,30 +180,24 @@ export default function LessonClientView({
   userId,
 }: LessonClientViewProps) {
   const supabase = createClient()
-
-  // State managers
-  const [progress, setProgress] = useState<any | null>(initialProgress)
-  const [notes, setNotes] = useState<any[]>(initialNotes)
-  const [newNote, setNewNote] = useState('')
   const [completedTasks, setCompletedTasks] = useState<Record<string, boolean>>({})
-  const [reflection, setReflection] = useState(initialProgress?.reflection || '')
-  
-  // Study Session state
-  const [sessionActive, setSessionActive] = useState(false)
-  const [sessionPaused, setSessionPaused] = useState(false)
-  const [seconds, setSeconds] = useState(0)
-  const [breakMinutes, setBreakMinutes] = useState(0)
-  const [currentSessionId, setCurrentSessionId] = useState<string | null>(null)
-  
-  // File upload state
   const [uploading, setUploading] = useState(false)
   const [uploadedUrl, setUploadedUrl] = useState<string | null>(null)
+  const [reflection, setReflection] = useState(initialProgress?.reflection || '')
+  const [newNote, setNewNote] = useState('')
+  const [notes, setNotes] = useState<any[]>(initialNotes)
   const [error, setError] = useState<string | null>(null)
 
-  const timerRef = useRef<NodeJS.Timeout | null>(null)
+  // Timer states
+  const [seconds, setSeconds] = useState(0)
+  const [sessionActive, setSessionActive] = useState(false)
+  const [sessionPaused, setSessionPaused] = useState(false)
+  const [breakMinutes, setBreakMinutes] = useState(0)
+  const [currentSessionId, setCurrentSessionId] = useState<string | null>(null)
+
+  const timerRef = useRef<any>(null)
   const pauseStartRef = useRef<number | null>(null)
 
-  // Timer runner
   useEffect(() => {
     if (sessionActive && !sessionPaused) {
       timerRef.current = setInterval(() => {
@@ -81,7 +219,6 @@ export default function LessonClientView({
     setSessionActive(true)
     setSessionPaused(false)
 
-    // Insert new study session
     const { data, error: err } = await supabase
       .from('study_sessions')
       .insert([{
@@ -99,14 +236,12 @@ export default function LessonClientView({
 
   const togglePauseSession = () => {
     if (sessionPaused) {
-      // Resumed: calculate break minutes
       if (pauseStartRef.current) {
         const breakMs = Date.now() - pauseStartRef.current
         setBreakMinutes((prev) => prev + Math.floor(breakMs / 60000))
       }
       setSessionPaused(false)
     } else {
-      // Paused
       pauseStartRef.current = Date.now()
       setSessionPaused(true)
     }
@@ -131,7 +266,6 @@ export default function LessonClientView({
 
     if (err) setError(err.message)
     else {
-      // Recalculate study hours on user_progress or daily_progress
       alert(`Study session logged: ${finalMinutes} minutes!`)
     }
   }
@@ -176,12 +310,10 @@ export default function LessonClientView({
 
       if (uploadErr) throw uploadErr
 
-      // Get Public URL
       const { data: { publicUrl } } = supabase.storage
         .from('practice-images')
         .getPublicUrl(filePath)
 
-      // Save upload record to practice_uploads
       const { error: dbErr } = await supabase
         .from('practice_uploads')
         .insert([{
@@ -223,41 +355,43 @@ export default function LessonClientView({
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 px-4">
       {error && (
-        <div className="rounded-xl bg-red-50 p-4 text-sm text-red-600 border border-red-100 flex items-center justify-between">
+        <div className="rounded-xl bg-red-50 p-4 text-xs font-bold text-red-600 border border-red-100 flex items-center justify-between">
           <span>{error}</span>
           <button onClick={() => setError(null)} className="font-bold">✕</button>
         </div>
       )}
 
-      {/* Lesson Heading banner */}
-      <div className="rounded-2xl border border-neutral-100 bg-white p-8 shadow-sm">
-        <div className="flex items-center space-x-2 text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-2">
+      {/* Lesson Header Banner */}
+      <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+        <div className="flex items-center space-x-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">
           <span>{lesson.chapter?.module?.course?.title}</span>
           <span>/</span>
           <span>{lesson.chapter?.title}</span>
         </div>
-        <h1 className="text-2xl font-bold text-neutral-900 tracking-tight">{lesson.title}</h1>
-        <div className="flex items-center space-x-4 mt-3 text-xs text-neutral-400 font-medium">
+        <h1 className="text-xl font-bold text-slate-900 tracking-tight">{lesson.title}</h1>
+        <div className="flex items-center space-x-4 mt-3 text-[10px] text-slate-400 font-bold uppercase tracking-wider">
           <span className="flex items-center space-x-1">
             <Clock className="h-3.5 w-3.5" />
             <span>{lesson.estimated_minutes} mins</span>
           </span>
-          <span className="inline-flex items-center rounded-lg bg-neutral-50 px-2.5 py-0.5 text-xs font-semibold text-neutral-500">
+          <span className="inline-flex items-center rounded-lg bg-slate-50 px-2 py-0.5 border border-slate-100">
             {lesson.difficulty}
           </span>
         </div>
       </div>
 
-      {/* Grid: Study Session Timer & Resources */}
+      {/* Grid Layout: Left Content, Right Sticky Actions */}
       <div className="grid gap-6 md:grid-cols-3">
-        {/* Left Column: Learning Materials & Resources */}
+        
+        {/* Left Column - Lesson Materials */}
         <div className="md:col-span-2 space-y-6">
+          
           {/* Objectives */}
-          <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm">
-            <h3 className="font-bold text-neutral-900 text-sm mb-4">Learning Objectives</h3>
-            <ul className="space-y-2 text-sm text-neutral-600">
+          <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+            <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider mb-4">Learning Objectives</h3>
+            <ul className="space-y-2 text-xs font-semibold text-slate-600">
               {lesson.learning_objectives?.map((obj: string, i: number) => (
                 <li key={i} className="flex items-start space-x-2">
                   <span className="text-blue-500 font-bold mt-0.5">•</span>
@@ -267,17 +401,19 @@ export default function LessonClientView({
             </ul>
           </div>
 
+          <RichLessonContent content={lesson.description} />
+
           {/* Video or Docs embedded */}
           {(lesson.video_url || lesson.documentation_url) && (
-            <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm space-y-4">
-              <h3 className="font-bold text-neutral-900 text-sm">Media & Documentation</h3>
-              <div className="flex flex-col space-y-2">
+            <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-4">
+              <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider">Media & Documentation</h3>
+              <div className="flex flex-col space-y-2.5 text-xs font-semibold">
                 {lesson.video_url && (
                   <a
                     href={lesson.video_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center space-x-2 text-sm font-semibold text-blue-600 hover:underline"
+                    className="flex items-center space-x-2 text-blue-600 hover:underline"
                   >
                     <Play className="h-4 w-4" />
                     <span>Watch Lesson Video</span>
@@ -289,7 +425,7 @@ export default function LessonClientView({
                     href={lesson.documentation_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center space-x-2 text-sm font-semibold text-blue-600 hover:underline"
+                    className="flex items-center space-x-2 text-blue-600 hover:underline"
                   >
                     <FileText className="h-4 w-4" />
                     <span>View Official Documentation</span>
@@ -300,53 +436,30 @@ export default function LessonClientView({
             </div>
           )}
 
-          {/* Resources lists */}
-          {resources.length > 0 && (
-            <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm">
-              <h3 className="font-bold text-neutral-900 text-sm mb-4">Additional Resources</h3>
-              <div className="space-y-3">
-                {resources.map((res) => (
-                  <div key={res.id} className="flex items-center justify-between rounded-xl bg-neutral-50/50 p-3 border border-neutral-100">
-                    <span className="text-sm font-semibold text-neutral-700">{res.title}</span>
-                    <a
-                      href={res.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center space-x-1 text-xs font-bold text-blue-600 hover:underline"
-                    >
-                      <span>Open Link</span>
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Notes manager */}
-          <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm space-y-4">
-            <h3 className="font-bold text-neutral-900 text-sm">Personal Notes</h3>
+          <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-4">
+            <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider">Study Notes</h3>
             <div className="flex space-x-2">
               <input
                 type="text"
                 value={newNote}
                 onChange={(e) => setNewNote(e.target.value)}
-                placeholder="Write note or code snippet..."
-                className="flex-1 rounded-xl border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                placeholder="Write code snippet or note..."
+                className="flex-1 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 outline-none focus:border-blue-500"
               />
               <button
                 onClick={handleSaveNote}
-                className="flex items-center space-x-1 rounded-xl bg-blue-600 px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition-colors"
+                className="flex items-center space-x-1 rounded-xl bg-blue-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-blue-700 transition-colors"
               >
                 <Save className="h-4 w-4" />
                 <span>Save</span>
               </button>
             </div>
-            <div className="space-y-2 mt-4 max-h-48 overflow-y-auto divide-y divide-neutral-50">
+            <div className="space-y-2 mt-4 max-h-48 overflow-y-auto divide-y divide-slate-50">
               {notes.map((note) => (
-                <div key={note.id} className="py-2.5 text-sm text-neutral-600">
-                  <p>{note.note}</p>
-                  <span className="text-[10px] text-neutral-400 font-medium">
+                <div key={note.id} className="py-2.5 text-xs font-semibold text-slate-600">
+                  <p className="text-slate-800">{note.note}</p>
+                  <span className="text-[9px] text-slate-400 font-bold mt-1 block">
                     {new Date(note.created_at).toLocaleDateString()}
                   </span>
                 </div>
@@ -355,20 +468,21 @@ export default function LessonClientView({
           </div>
         </div>
 
-        {/* Right Column: Study Session Timer & Uploads */}
+        {/* Right Column - Study Session & Checklist */}
         <div className="space-y-6">
+          
           {/* Study Session Widget */}
-          <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm space-y-4">
-            <h3 className="font-bold text-neutral-900 text-sm">Study Session</h3>
+          <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-4">
+            <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider">Study Session Timer</h3>
             {sessionActive ? (
               <div className="space-y-4 text-center">
-                <div className="text-3xl font-extrabold text-neutral-800 tracking-wider">
+                <div className="text-2xl font-extrabold text-slate-800 tracking-wider font-mono">
                   {Math.floor(seconds / 60)}m {seconds % 60}s
                 </div>
                 {sessionPaused && (
-                  <p className="text-amber-500 text-xs font-semibold uppercase animate-pulse">Session Paused</p>
+                  <p className="text-amber-500 text-[10px] font-bold uppercase tracking-wider animate-pulse">Session Paused</p>
                 )}
-                <div className="flex justify-center space-x-2">
+                <div className="flex justify-center space-x-3">
                   <button
                     onClick={togglePauseSession}
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-50 text-amber-600 hover:bg-amber-100 transition-colors"
@@ -386,17 +500,17 @@ export default function LessonClientView({
             ) : (
               <button
                 onClick={startStudySession}
-                className="flex w-full items-center justify-center space-x-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-sm hover:bg-blue-700 transition-all"
+                className="flex w-full items-center justify-center space-x-2 rounded-xl bg-blue-600 py-3 text-xs font-bold text-white shadow-sm hover:bg-blue-700 transition-all"
               >
                 <Play className="h-4 w-4 fill-current" />
-                <span>Start Session</span>
+                <span>Start Study Session</span>
               </button>
             )}
           </div>
 
           {/* Tasks & Practice Upload Checklist */}
-          <div className="rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm space-y-6">
-            <h3 className="font-bold text-neutral-900 text-sm">Tasks & Practice</h3>
+          <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm space-y-6">
+            <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider">Tasks & Uploads</h3>
             <div className="space-y-4">
               {tasks.map((task) => (
                 <div key={task.id} className="space-y-2">
@@ -411,21 +525,20 @@ export default function LessonClientView({
                       {completedTasks[task.id] ? (
                         <CheckSquare className="h-4.5 w-4.5 text-blue-600" />
                       ) : (
-                        <EmptySquare className="h-4.5 w-4.5 text-neutral-400" />
+                        <EmptySquare className="h-4.5 w-4.5 text-slate-400" />
                       )}
                     </button>
-                    <span className="text-sm font-medium text-neutral-700">{task.title}</span>
+                    <span className="text-xs font-semibold text-slate-700 leading-normal">{task.title}</span>
                   </div>
 
-                  {/* If task requires file upload */}
                   {task.upload && (
                     <div className="ml-7 pt-2">
-                      <label className="flex items-center space-x-2 rounded-lg border border-dashed border-neutral-200 bg-neutral-50/50 px-3 py-2 text-xs font-semibold text-neutral-500 cursor-pointer hover:bg-neutral-100 transition-colors">
-                        <FileUp className="h-4 w-4 text-neutral-400" />
-                        <span>{uploading ? 'Uploading...' : 'Upload screenshot/assignment'}</span>
+                      <label className="flex items-center space-x-2 rounded-lg border border-dashed border-slate-200 bg-slate-50/50 px-3 py-2 text-[10px] font-bold text-slate-500 cursor-pointer hover:bg-slate-100 transition-colors">
+                        <FileUp className="h-4 w-4 text-slate-400" />
+                        <span>{uploading ? 'Uploading...' : 'Upload screenshot'}</span>
                         <input
                           type="file"
-                          accept=".png,.jpg,.jpeg,.pdf,.zip,.txt,.md,.docx"
+                          accept=".png,.jpg,.jpeg,.pdf,.zip"
                           onChange={(e) => handleFileUpload(e, task.id)}
                           disabled={uploading}
                           className="hidden"
@@ -437,28 +550,51 @@ export default function LessonClientView({
               ))}
             </div>
 
+            {/* Resources list */}
+            {resources.length > 0 && (
+              <div className="space-y-2 pt-4 border-t border-slate-50">
+                <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Downloads & Resources</span>
+                <div className="space-y-2 text-xs font-semibold">
+                  {resources.map((res) => (
+                    <a
+                      key={res.id}
+                      href={res.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-between text-blue-600 hover:underline"
+                    >
+                      <span>{res.title}</span>
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Reflection Textarea */}
-            <div className="pt-4 border-t border-neutral-50 space-y-2">
-              <label className="block text-xs font-semibold text-neutral-600 uppercase">Self Reflection</label>
+            <div className="pt-4 border-t border-slate-50 space-y-2">
+              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Self Reflection</label>
               <textarea
                 value={reflection}
                 onChange={(e) => setReflection(e.target.value)}
-                placeholder="What did you learn today? What was difficult?"
+                placeholder="What did you learn? What was difficult?"
                 rows={3}
-                className="w-full rounded-xl border border-neutral-200 bg-white p-3 text-sm text-neutral-900 outline-none focus:border-blue-500 transition-all resize-none"
+                className="w-full rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-900 outline-none focus:border-blue-500 transition-all resize-none"
               />
             </div>
 
             {/* Mark complete button */}
             <button
               onClick={markLessonComplete}
-              className="flex w-full items-center justify-center space-x-2 rounded-xl bg-emerald-600 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-700 transition-all"
+              className="flex w-full items-center justify-center space-x-2 rounded-xl bg-green-600 py-3 text-xs font-bold text-white shadow-sm hover:bg-green-700 transition-all active:scale-[0.98]"
             >
               <CheckCircle className="h-4.5 w-4.5" />
               <span>Mark Lesson Complete</span>
             </button>
           </div>
+
         </div>
+
       </div>
     </div>
   )

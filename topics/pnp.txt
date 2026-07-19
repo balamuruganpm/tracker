@@ -1,0 +1,229 @@
+PnP JS Master Course (Beginner → Enterprise)
+Module 1 – Introduction to PnP JS
+Chapter 1 – PnP JS Fundamentals
+What is PnP JS?
+Why PnP JS?
+PnP JS vs SharePoint REST API
+PnP JS Architecture
+Packages Overview
+Supported Environments
+SPFx Integration
+Node.js Usage
+Browser Usage
+Best Practices
+Chapter 2 – Installation & Setup
+Install PnP JS
+Project Structure
+SPFx Configuration
+Initialize SPFI
+Authentication
+Setup with React
+Setup with Next.js
+Debugging
+Module 2 – SharePoint Context
+Chapter 3 – SPFI Instance
+Create SPFI
+SPFx Context
+Using SPFI
+Configuration
+Reusable Service
+Dependency Injection
+Module 3 – SharePoint Web
+Chapter 4 – Web Operations
+Get Current Web
+Web Properties
+Site Information
+Current User
+Regional Settings
+Site Features
+Web Languages
+Time Zone
+Module 4 – Lists
+Chapter 5 – List Operations
+Get Lists
+Get List by Title
+Create List
+Update List
+Delete List
+Hide List
+List Properties
+List Settings
+Chapter 6 – List Items (CRUD)
+Get Items
+Get Item by ID
+Add Item
+Update Item
+Delete Item
+Batch CRUD
+Pagination
+Select & Expand
+Filter
+OrderBy
+Module 5 – Advanced List Queries
+Chapter 7
+CAML Query
+OData Query
+Search
+Lookup Fields
+Person Fields
+Choice Fields
+Managed Metadata
+Attachments
+Module 6 – Document Libraries
+Chapter 8
+Get Libraries
+Upload File
+Download File
+Delete File
+Move File
+Copy File
+Rename File
+Version History
+Folder Operations
+Large File Upload
+Module 7 – Folders
+Chapter 9
+Create Folder
+Rename Folder
+Delete Folder
+Folder Structure
+Folder Metadata
+Move Folder
+Copy Folder
+Module 8 – Users & Groups
+Chapter 10
+Current User
+Site Users
+Add User
+Remove User
+SharePoint Groups
+Owners
+Members
+Visitors
+User Profile
+Profile Properties
+Module 9 – Permissions
+Chapter 11
+Permission Levels
+Break Inheritance
+Restore Inheritance
+Assign Permissions
+Remove Permissions
+Item Permissions
+Folder Permissions
+List Permissions
+Module 10 – Search
+Chapter 12
+SharePoint Search
+Keyword Search
+Search Filters
+Search Sorting
+Search Templates
+Search API
+Module 11 – Taxonomy
+Chapter 13
+Term Store
+Term Groups
+Term Sets
+Terms
+Managed Metadata
+Taxonomy Fields
+Module 12 – Site Features
+Chapter 14
+Site Columns
+Content Types
+Features
+Site Settings
+Navigation
+Themes
+Module 13 – Microsoft Graph
+Chapter 15
+Graph Integration
+GraphFI
+Users
+Groups
+Teams
+OneDrive
+Outlook
+Calendar
+Planner
+Files
+Module 14 – Batch Processing
+Chapter 16
+Batch Requests
+Batch CRUD
+Performance
+Error Handling
+Transactions
+Module 15 – Logging & Error Handling
+Chapter 17
+Logging
+Error Handling
+Retry Logic
+Exception Management
+Debugging
+Monitoring
+Module 16 – Performance Optimization
+Chapter 18
+Select()
+Expand()
+Pagination
+Lazy Loading
+Caching
+Batch Requests
+Minimize Network Calls
+Performance Best Practices
+Module 17 – Reusable Services
+Chapter 19
+Service Layer
+Repository Pattern
+Generic CRUD Service
+Base Service
+Dependency Injection
+Clean Architecture
+Module 18 – Integration
+Chapter 20
+React Integration
+SPFx Integration
+Next.js Integration
+Azure Functions
+Power Apps
+Power Automate
+Module 19 – Security
+Chapter 21
+Authentication
+Authorization
+Permission Checks
+Secure API Calls
+Token Management
+Best Practices
+Module 20 – Enterprise Projects
+Chapter 22 – Beginner Projects
+Employee Directory
+Company Announcements
+Holiday Calendar
+Contacts List
+Task Manager
+Chapter 23 – Intermediate Projects
+Leave Management
+Asset Tracker
+Help Desk
+Project Tracker
+Document Approval
+Chapter 24 – Enterprise Projects
+HR Portal
+Employee Self-Service
+Learning Management System
+Document Management System
+Company Intranet Dashboard
+Project Management Portal
+Final Revision
+200+ PnP JS Interview Questions
+150+ Practical Coding Exercises
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Exercises
+15 Assignments
+10 Mini Projects
+5 Intermediate Projects
+5 Enterprise Projects

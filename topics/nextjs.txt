@@ -1,0 +1,241 @@
+Next.js Master Course (Beginner → Advanced)
+Module 1 – Introduction to Next.js
+Chapter 1 – Getting Started
+What is Next.js?
+Why Next.js?
+React vs Next.js
+Features of Next.js
+Next.js Architecture
+App Router vs Pages Router
+Rendering Methods Overview
+Next.js Use Cases
+Chapter 2 – Environment Setup
+Install Node.js
+Install Next.js
+Create Project
+Folder Structure
+VS Code Extensions
+Development Server
+Build Process
+Production Deployment
+Module 2 – Project Structure
+Chapter 3 – Folder Structure
+app/
+public/
+components/
+lib/
+hooks/
+services/
+styles/
+middleware.ts
+next.config.ts
+package.json
+Module 3 – Routing
+Chapter 4 – App Router
+File-based Routing
+Nested Routes
+Dynamic Routes
+Catch-all Routes
+Optional Catch-all Routes
+Route Groups
+Parallel Routes
+Intercepting Routes
+Chapter 5 – Navigation
+Link Component
+useRouter()
+Redirect
+Navigation Events
+Programmatic Navigation
+Route Prefetching
+Module 4 – Layout System
+Chapter 6
+layout.tsx
+Root Layout
+Nested Layouts
+Templates
+Metadata
+SEO Basics
+Module 5 – Rendering
+Chapter 7 – Server Components
+What are Server Components?
+Advantages
+Data Fetching
+Streaming
+Server-only Code
+Chapter 8 – Client Components
+"use client"
+Interactive Components
+Hooks in Client Components
+Event Handling
+State Management
+Chapter 9 – Rendering Strategies
+SSR
+SSG
+ISR
+CSR
+Streaming
+Partial Prerendering (Introduction)
+Module 6 – Data Fetching
+Chapter 10
+fetch()
+Async Server Components
+Caching
+Revalidation
+Dynamic Data
+Error Handling
+Module 7 – API Routes
+Chapter 11
+Route Handlers
+GET
+POST
+PUT
+DELETE
+PATCH
+Response Object
+Request Object
+Module 8 – Forms
+Chapter 12
+Forms
+Form Validation
+Server Actions
+Client Validation
+Zod Integration
+Module 9 – Authentication
+Chapter 13
+Authentication Basics
+Cookies
+Sessions
+JWT
+Protected Routes
+Middleware
+Supabase Auth
+OAuth
+Module 10 – Middleware
+Chapter 14
+middleware.ts
+Route Protection
+Redirects
+Headers
+Authentication Middleware
+Module 11 – Database Integration
+Chapter 15
+Supabase
+PostgreSQL
+CRUD Operations
+Prisma (Introduction)
+Drizzle ORM (Introduction)
+Module 12 – File Upload
+Chapter 16
+Upload Files
+Images
+Documents
+Supabase Storage
+Image Optimization
+Module 13 – Styling
+Chapter 17
+Tailwind CSS
+CSS Modules
+Global CSS
+shadcn/ui
+Responsive Design
+Module 14 – State Management
+Chapter 18
+React Context
+Zustand
+Redux Toolkit
+Server State
+Client State
+Module 15 – Performance
+Chapter 19
+Image Component
+Font Optimization
+Lazy Loading
+Dynamic Imports
+Bundle Optimization
+Code Splitting
+Module 16 – Error Handling
+Chapter 20
+error.tsx
+loading.tsx
+not-found.tsx
+Global Error Handling
+Error Boundaries
+Module 17 – Deployment
+Chapter 21
+Vercel
+Environment Variables
+Production Build
+Custom Domain
+Build Logs
+Deployment Debugging
+Module 18 – Advanced Features
+Chapter 22
+Metadata API
+Dynamic Metadata
+Robots.txt
+Sitemap.xml
+Open Graph Images
+Chapter 23
+Suspense
+Streaming UI
+Optimistic UI
+Partial Rendering
+Module 19 – Security
+Chapter 24
+Authentication Security
+Authorization
+CSRF
+XSS
+Environment Variables
+Server-only Secrets
+Module 20 – Enterprise Architecture
+Chapter 25
+Feature-based Folder Structure
+Clean Architecture
+Repository Pattern
+Service Layer
+API Layer
+Custom Hooks
+Reusable Components
+Shared UI Library
+Module 21 – Testing
+Chapter 26
+Jest
+React Testing Library
+Playwright
+End-to-End Testing
+Module 22 – Monitoring
+Chapter 27
+Logging
+Analytics
+Error Tracking
+Performance Monitoring
+Module 23 – Real Projects
+Chapter 28 – Beginner Projects
+Portfolio Website
+Blog
+Notes App
+Todo App
+Weather App
+Chapter 29 – Intermediate Projects
+Authentication System
+Expense Tracker
+Learning Tracker
+CRM Dashboard
+Employee Directory
+Chapter 30 – Advanced Projects
+Learning Management System (LMS)
+Admin Dashboard
+Project 730
+SaaS Application
+E-commerce Dashboard
+Project Management Tool
+Final Revision
+250+ Next.js Interview Questions
+150+ Coding Challenges
+100 MCQs
+50 Debugging Exercises
+20 Assignments
+10 Mini Projects
+5 Intermediate Projects
+5 Enterprise-Level Projects

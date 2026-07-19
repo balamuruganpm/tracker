@@ -1,0 +1,234 @@
+TypeScript Master Course (Beginner → Advanced)
+Module 1 – Introduction to TypeScript
+Chapter 1 – Introduction
+What is TypeScript?
+Why TypeScript?
+JavaScript vs TypeScript
+Advantages
+Disadvantages
+TypeScript Compiler (tsc)
+TypeScript Workflow
+Real-world Applications
+Chapter 2 – Environment Setup
+Install Node.js
+Install TypeScript
+npm
+npx
+tsconfig.json
+VS Code Setup
+Compile TypeScript
+Watch Mode
+Module 2 – Basic Types
+Chapter 3 – Data Types
+number
+string
+boolean
+bigint
+symbol
+null
+undefined
+any
+unknown
+never
+void
+Chapter 4 – Variables
+let
+const
+Type Inference
+Explicit Types
+Naming Rules
+Best Practices
+Chapter 5 – Operators
+Arithmetic
+Assignment
+Comparison
+Logical
+Nullish Coalescing
+Optional Chaining
+Module 3 – Functions
+Chapter 6 – Functions
+Function Syntax
+Parameters
+Return Types
+Optional Parameters
+Default Parameters
+Rest Parameters
+Function Overloading
+Arrow Functions
+Chapter 7 – Advanced Functions
+Callback Functions
+Higher Order Functions
+Generic Functions
+Function Types
+Module 4 – Objects
+Chapter 8 – Objects
+Object Types
+Nested Objects
+Readonly
+Optional Properties
+Index Signatures
+Object Destructuring
+Chapter 9 – Arrays & Tuples
+Arrays
+Multi-dimensional Arrays
+Tuples
+Readonly Arrays
+Module 5 – Type System
+Chapter 10 – Union Types
+Union
+Narrowing
+Type Guards
+Chapter 11 – Literal Types
+String Literal
+Number Literal
+Boolean Literal
+Chapter 12 – Type Aliases
+Create Alias
+Nested Alias
+Alias Best Practices
+Chapter 13 – Enums
+Numeric Enum
+String Enum
+Const Enum
+Enum vs Object
+Module 6 – Interfaces
+Chapter 14 – Interfaces
+Interface Basics
+Optional Properties
+Readonly Properties
+Function Interfaces
+Extending Interfaces
+Interface vs Type
+Module 7 – Classes
+Chapter 15 – Classes
+Classes
+Objects
+Constructors
+Properties
+Methods
+Static Members
+Chapter 16 – OOP
+Inheritance
+Encapsulation
+Polymorphism
+Abstraction
+Access Modifiers
+Getters
+Setters
+Module 8 – Generics
+Chapter 17 – Generics
+Generic Functions
+Generic Interfaces
+Generic Classes
+Constraints
+Default Types
+Module 9 – Modules
+Chapter 18 – Modules
+Export
+Import
+Default Export
+Named Export
+Barrel Files
+Module 10 – Advanced Types
+Chapter 19
+keyof
+typeof
+in Operator
+Mapped Types
+Conditional Types
+Utility Types
+Chapter 20 – Utility Types
+Partial
+Required
+Pick
+Omit
+Record
+Exclude
+Extract
+ReturnType
+Module 11 – Async TypeScript
+Chapter 21
+Promise
+async
+await
+Error Handling
+Module 12 – Configuration
+Chapter 22
+tsconfig.json
+Compiler Options
+Target
+Module
+Strict Mode
+Path Mapping
+Module 13 – TypeScript + React
+Chapter 23
+React Setup
+Props Types
+State Types
+Event Types
+Context Types
+API Types
+Custom Hook Types
+Module 14 – TypeScript + Node.js
+Chapter 24
+Express
+Request Types
+Response Types
+Middleware Types
+Environment Variables
+Module 15 – Enterprise TypeScript
+Chapter 25
+Folder Structure
+DTOs
+Models
+Services
+Repository Pattern
+Dependency Injection
+SOLID Principles
+Module 16 – Testing
+Chapter 26
+Jest
+Unit Testing
+Mocking
+Assertions
+Module 17 – Debugging
+Chapter 27
+Source Maps
+VS Code Debugger
+Chrome DevTools
+Common Errors
+Module 18 – Build & Deployment
+Chapter 28
+npm Build
+Vite
+Webpack
+Production Build
+Module 19 – Real Projects
+Chapter 29 – Beginner Projects
+Calculator
+Todo App
+Notes App
+Student Management
+Employee List
+Chapter 30 – Intermediate Projects
+Weather App
+Expense Tracker
+Quiz App
+Movie App
+Authentication App
+Chapter 31 – Advanced Projects
+Admin Dashboard
+CRM Dashboard
+Inventory Management
+Learning Management System
+Employee Portal
+Final Revision
+300+ TypeScript Interview Questions
+200+ Coding Challenges
+100 MCQs
+50 Output-Based Questions
+25 Debugging Exercises
+15 Assignments
+10 Mini Projects
+5 Intermediate Projects
+3 Enterprise Projects

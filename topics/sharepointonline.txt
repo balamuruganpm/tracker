@@ -1,0 +1,194 @@
+SharePoint Online Master Course (Beginner → Advanced)
+Module 1 – Introduction to SharePoint
+Chapter 1 – SharePoint Basics
+What is SharePoint?
+History of SharePoint
+SharePoint On-Premises vs SharePoint Online
+Microsoft 365 Ecosystem
+SharePoint Architecture
+SharePoint Use Cases
+SharePoint Licensing
+SharePoint Terminology
+Chapter 2 – Microsoft 365
+What is Microsoft 365?
+Microsoft Admin Center
+Microsoft 365 Apps
+Microsoft Entra ID
+User Accounts
+Groups
+Permissions
+Security Basics
+Module 2 – SharePoint Sites
+Chapter 3 – Site Types
+Team Sites
+Communication Sites
+Hub Sites
+Root Site
+Site Collections
+Site Navigation
+Site Templates
+Site Settings
+Chapter 4 – Site Management
+Create Site
+Delete Site
+Site Permissions
+Site Owners
+Site Members
+Site Visitors
+Site Features
+Site Branding
+Module 3 – Lists
+Chapter 5 – SharePoint Lists
+Introduction to Lists
+Create List
+List Templates
+Columns
+Rows
+List Views
+Sorting
+Filtering
+Grouping
+Formatting
+Chapter 6 – List Columns
+Single Line Text
+Multiple Line Text
+Number
+Currency
+Date & Time
+Choice
+Lookup
+Person
+Hyperlink
+Managed Metadata
+Module 4 – Libraries
+Chapter 7 – Document Libraries
+Create Library
+Upload Files
+Version History
+Check In
+Check Out
+Approval
+Metadata
+Folder Structure
+Chapter 8 – File Management
+Copy
+Move
+Share
+Download
+Restore
+Delete
+Recycle Bin
+Permissions
+Module 5 – Permissions
+Chapter 9
+Users
+Groups
+Permission Levels
+Inheritance
+Breaking Inheritance
+Item Level Permissions
+Security Best Practices
+Module 6 – Pages
+Chapter 10
+Site Pages
+Modern Pages
+Sections
+Web Parts
+Publish Pages
+News Posts
+Hero Web Part
+Image Gallery
+Module 7 – Web Parts
+Chapter 11
+Text
+Image
+Quick Links
+Events
+News
+People
+List
+Library
+Module 8 – Search
+Chapter 12
+SharePoint Search
+Managed Properties
+Crawled Properties
+Search Results
+Filters
+Search Center
+Module 9 – Content Management
+Chapter 13
+Content Types
+Site Columns
+Metadata
+Taxonomy
+Term Store
+Managed Metadata
+Module 10 – Power Platform Integration
+Chapter 14
+Power Apps Integration
+Power Automate Integration
+Forms
+Notifications
+Approval Workflows
+Module 11 – REST API
+Chapter 15
+REST API Basics
+GET
+POST
+PATCH
+DELETE
+Authentication
+JSON Response
+CRUD Operations
+Module 12 – Microsoft Graph
+Chapter 16
+Graph API Basics
+Authentication
+Users API
+Groups API
+Files API
+SharePoint API
+Module 13 – Administration
+Chapter 17
+SharePoint Admin Center
+Storage
+Quotas
+Site Policies
+Compliance
+Audit Logs
+Module 14 – Best Practices
+Chapter 18
+Information Architecture
+Governance
+Naming Standards
+Security
+Performance
+Backup & Recovery
+Module 15 – Real Projects
+Chapter 19 – Beginner Projects
+Employee Directory
+Notice Board
+Holiday Calendar
+Document Library
+Team Site
+Chapter 20 – Intermediate Projects
+Leave Management
+Help Desk
+Asset Tracking
+Project Tracker
+Knowledge Base
+Chapter 21 – Enterprise Projects
+HR Portal
+Intranet Portal
+Employee Onboarding
+Document Management System
+Learning Management Portal
+Final Revision
+200+ SharePoint Interview Questions
+150+ Practical Exercises
+100 MCQs
+30 Scenario-Based Questions
+10 Beginner Projects
+5 Intermediate Projects
+3 Enterprise Projects

@@ -1,0 +1,262 @@
+Microsoft Graph API Master Course (Beginner → Enterprise)
+Module 1 – Introduction to Microsoft Graph
+Chapter 1 – Microsoft Graph Fundamentals
+What is Microsoft Graph API?
+Why Microsoft Graph?
+Microsoft 365 Ecosystem
+Graph API Architecture
+REST Principles
+Graph Explorer
+Graph Versions (v1.0 & beta)
+Common Use Cases
+Graph API Endpoints
+Best Practices
+Module 2 – Azure App Registration
+Chapter 2 – Authentication Setup
+Microsoft Entra ID Overview
+App Registration
+Client ID
+Tenant ID
+Client Secret
+Certificates
+Redirect URI
+API Permissions
+Admin Consent
+Authentication Flow
+Module 3 – Authentication & Authorization
+Chapter 3
+OAuth 2.0
+OpenID Connect
+Access Token
+Refresh Token
+ID Token
+Delegated Permissions
+Application Permissions
+Authorization Code Flow
+Client Credentials Flow
+PKCE
+Module 4 – Graph SDK
+Chapter 4
+Microsoft Graph JavaScript SDK
+Installation
+Authentication Provider
+Graph Client
+Making First Request
+Error Handling
+Logging
+Retry Logic
+Module 5 – Users API
+Chapter 5
+Get Current User
+Get User by ID
+List Users
+Create User
+Update User
+Delete User
+User Profile
+User Photo
+User Manager
+User Direct Reports
+Module 6 – Groups API
+Chapter 6
+List Groups
+Create Group
+Update Group
+Delete Group
+Group Members
+Owners
+Security Groups
+Microsoft 365 Groups
+Dynamic Groups
+Group Conversations
+Module 7 – SharePoint API
+Chapter 7
+Sites
+Lists
+List Items
+Libraries
+Pages
+Drives
+Site Permissions
+Search
+Webs
+Site Metadata
+Module 8 – OneDrive API
+Chapter 8
+Drives
+Upload Files
+Download Files
+Delete Files
+Move Files
+Copy Files
+Sharing
+Folder Operations
+File Versions
+Search Files
+Module 9 – Outlook API
+Chapter 9
+Mail
+Send Email
+Read Emails
+Drafts
+Attachments
+Contacts
+Mail Folders
+Rules
+Categories
+Signatures
+Module 10 – Calendar API
+Chapter 10
+Events
+Create Meeting
+Update Meeting
+Delete Meeting
+Recurring Events
+Calendar View
+Free/Busy Schedule
+Time Zones
+Module 11 – Microsoft Teams API
+Chapter 11
+Teams
+Channels
+Messages
+Replies
+Tabs
+Apps
+Members
+Meetings
+Chat
+Presence
+Module 12 – Planner API
+Chapter 12
+Plans
+Buckets
+Tasks
+Assignments
+Progress
+Labels
+Checklists
+Comments
+Module 13 – Excel API
+Chapter 13
+Workbooks
+Worksheets
+Tables
+Cells
+Charts
+Formulas
+Ranges
+Pivot Tables
+Module 14 – Files & Drive
+Chapter 14
+Drive Items
+Upload Large Files
+Download
+Move
+Copy
+Version History
+Sharing Links
+Permissions
+Module 15 – Search API
+Chapter 15
+Search Users
+Search Files
+Search Sites
+Search Messages
+Search Events
+Search Configuration
+Module 16 – Batch Requests
+Chapter 16
+Batch API
+Multiple Requests
+Dependencies
+Performance Optimization
+Error Handling
+Module 17 – Webhooks
+Chapter 17
+Change Notifications
+Subscriptions
+Validation
+Renew Subscriptions
+Webhook Security
+Module 18 – Delta Queries
+Chapter 18
+Delta Tokens
+User Changes
+Mail Changes
+File Changes
+Sync Strategies
+Module 19 – Error Handling
+Chapter 19
+HTTP Status Codes
+Graph Errors
+Retry Logic
+Rate Limiting
+Throttling
+Logging
+Module 20 – Performance
+Chapter 20
+Pagination
+Filtering
+Select
+Expand
+OrderBy
+Search
+Batch Requests
+Caching
+Module 21 – Security
+Chapter 21
+Least Privilege
+Permission Management
+Secure Token Storage
+Secret Management
+Certificate Authentication
+Security Best Practices
+Module 22 – Integration
+Chapter 22
+React Integration
+Next.js Integration
+SPFx Integration
+Power Apps Integration
+Power Automate Integration
+Azure Functions
+Module 23 – Enterprise Architecture
+Chapter 23
+Service Layer
+Repository Pattern
+Dependency Injection
+API Wrappers
+Configuration
+Logging
+Monitoring
+Unit Testing
+Module 24 – Real Projects
+Chapter 24 – Beginner Projects
+Employee Directory
+User Profile Viewer
+Company Contacts
+Calendar Viewer
+Email Reader
+Chapter 25 – Intermediate Projects
+Leave Management
+Meeting Scheduler
+Document Dashboard
+Team Directory
+Task Manager
+Chapter 26 – Enterprise Projects
+Microsoft 365 Dashboard
+HR Portal
+Employee Self-Service Portal
+Learning Management System
+Company Intranet Portal
+Project Management Portal
+Final Revision
+250+ Microsoft Graph API Interview Questions
+200+ Coding Exercises
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Challenges
+15 Assignments
+10 Mini Projects
+5 Intermediate Projects
+5 Enterprise-Level Projects

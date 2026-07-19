@@ -1,0 +1,219 @@
+SPFx (SharePoint Framework) Master Course (Beginner → Enterprise)
+Module 1 – SPFx Fundamentals
+Chapter 1 – Introduction to SPFx
+What is SPFx?
+Why SPFx?
+SPFx Architecture
+SPFx vs Script Editor
+SPFx vs Add-ins
+SPFx Versions
+Client-side Web Parts
+Extensions
+Library Components
+SPFx Use Cases
+Chapter 2 – Environment Setup
+Node.js Version
+npm
+Yeoman
+Gulp
+TypeScript
+Visual Studio Code
+SharePoint Online Tenant
+Developer Tenant
+Workbench
+Create First SPFx Project
+Module 2 – Project Structure
+Chapter 3 – SPFx Project
+Folder Structure
+package.json
+tsconfig.json
+config Folder
+gulpfile.js
+manifests
+loc Folder
+assets Folder
+temp Folder
+dist Folder
+Module 3 – Development Workflow
+Chapter 4 – Development
+gulp serve
+Workbench
+Local Workbench
+Hosted Workbench
+Debugging
+Live Reload
+Build Process
+Bundle
+Package Solution
+Module 4 – Web Parts
+Chapter 5 – Basic Web Parts
+Hello World
+Property Pane
+Text Fields
+Dropdown
+Toggle
+Slider
+Checkbox
+Button
+Labels
+Validation
+Chapter 6 – Advanced Property Pane
+Dynamic Fields
+Custom Controls
+Conditional Controls
+Validation
+Reactive Properties
+Non-Reactive Properties
+Module 5 – React in SPFx
+Chapter 7
+React Components
+Props
+State
+Hooks
+Forms
+Lists
+Events
+Conditional Rendering
+Component Communication
+Reusable Components
+Module 6 – SharePoint Data
+Chapter 8
+REST API
+CRUD Operations
+SharePoint Lists
+Libraries
+Items
+Pagination
+Filtering
+Sorting
+Search
+Batch Requests
+Module 7 – PnP JS
+Chapter 9
+Introduction
+Installation
+Configuration
+CRUD
+Lists
+Libraries
+Users
+Groups
+Files
+Search
+Module 8 – Microsoft Graph
+Chapter 10
+Graph API
+Graph Client
+Users
+Groups
+Calendar
+OneDrive
+Teams
+Planner
+Mail
+Profile
+Module 9 – SPFx Extensions
+Chapter 11
+Application Customizer
+ListView Command Set
+Field Customizer
+Custom Header
+Footer
+Notifications
+Branding
+Module 10 – Adaptive Card Extensions
+Chapter 12
+Viva Connections
+Adaptive Cards
+Card View
+Quick View
+State Management
+Navigation
+Module 11 – Authentication
+Chapter 13
+AadHttpClient
+MSGraphClient
+OAuth
+Permissions
+API Security
+Token Flow
+Module 12 – Performance
+Chapter 14
+Lazy Loading
+Dynamic Imports
+Code Splitting
+Bundle Optimization
+Caching
+Performance Monitoring
+Module 13 – Testing
+Chapter 15
+Jest
+Unit Testing
+Mocking
+Snapshot Testing
+Debugging
+Code Coverage
+Module 14 – Deployment
+Chapter 16
+Package Solution
+App Catalog
+Tenant Deployment
+Site Deployment
+Versioning
+Upgrading Solutions
+Module 15 – Enterprise Development
+Chapter 17
+Folder Structure
+Services Layer
+API Layer
+Repository Pattern
+Dependency Injection
+Error Handling
+Logging
+Localization
+Environment Configuration
+Reusable Components
+Module 16 – Integration
+Chapter 18
+Power Apps
+Power Automate
+Azure Functions
+Azure Storage
+Dataverse
+Microsoft Teams
+Module 17 – Security
+Chapter 19
+Permissions
+Tenant APIs
+Secure Coding
+XSS Prevention
+CSRF
+Data Protection
+Module 18 – Real Projects
+Chapter 20 – Beginner Projects
+Employee Directory
+Company News Web Part
+Quick Links
+Holiday Calendar
+Document Viewer
+Chapter 21 – Intermediate Projects
+Leave Management
+Help Desk
+Asset Tracker
+Employee Dashboard
+Project Tracker
+Chapter 22 – Enterprise Projects
+HR Portal
+Learning Management System
+Document Management System
+Company Intranet
+Employee Self-Service Portal
+Final Revision
+250+ SPFx Interview Questions
+150+ Coding Challenges
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Exercises
+10 Mini Projects
+5 Intermediate Projects
+5 Enterprise Projects

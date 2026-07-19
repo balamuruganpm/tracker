@@ -1,0 +1,288 @@
+React.js Master Course (Beginner → Advanced)
+Module 1 – React Fundamentals
+Chapter 1 – Introduction to React
+What is React?
+Why React?
+History of React
+React vs Vanilla JavaScript
+React vs Angular vs Vue
+Virtual DOM
+Real DOM
+React Architecture
+Component-Based Development
+React Ecosystem
+Chapter 2 – Environment Setup
+Node.js
+npm
+npx
+Vite
+Create React App (CRA)
+Project Structure
+Running React App
+VS Code Extensions
+React Developer Tools
+First React Application
+Chapter 3 – JSX
+What is JSX?
+JSX Syntax
+JSX Rules
+Expressions in JSX
+JavaScript inside JSX
+Attributes
+Comments
+Fragments
+Rendering Multiple Elements
+JSX Best Practices
+Module 2 – Components
+Chapter 4 – Components
+Functional Components
+Component Naming
+Reusable Components
+Export Components
+Import Components
+Nested Components
+Component Composition
+Component Best Practices
+Chapter 5 – Props
+What are Props?
+Passing Props
+Receiving Props
+Default Props
+Props Destructuring
+Children Props
+Passing Functions
+Passing Objects
+Passing Arrays
+Props Best Practices
+Chapter 6 – State
+What is State?
+useState()
+Updating State
+Multiple States
+Object State
+Array State
+Functional Updates
+Controlled State
+Derived State
+Module 3 – Rendering
+Chapter 7 – Conditional Rendering
+if Statement
+Ternary Operator
+&&
+Switch
+Dynamic UI
+Chapter 8 – Lists
+map()
+Keys
+Rendering Arrays
+Filtering
+Sorting
+Dynamic Lists
+Module 4 – Events
+Chapter 9 – Event Handling
+Click
+Input
+Change
+Submit
+Keyboard Events
+Mouse Events
+Form Events
+Event Objects
+Chapter 10 – Forms
+Controlled Components
+Uncontrolled Components
+Validation
+Multiple Inputs
+Checkbox
+Radio
+Select
+Textarea
+File Upload
+Module 5 – Hooks
+Chapter 11 – useState
+Chapter 12 – useEffect
+Lifecycle
+Dependencies
+Cleanup
+API Calls
+Chapter 13 – useRef
+Chapter 14 – useMemo
+Chapter 15 – useCallback
+Chapter 16 – Custom Hooks
+Module 6 – Styling
+Chapter 17
+CSS
+CSS Modules
+Inline CSS
+Styled Components
+Tailwind CSS
+Bootstrap
+Material UI
+Module 7 – Routing
+Chapter 18 – React Router
+Installation
+BrowserRouter
+Routes
+Route
+Link
+NavLink
+useNavigate
+Route Parameters
+Nested Routes
+Protected Routes
+Module 8 – API Integration
+Chapter 19
+Fetch API
+Axios
+GET
+POST
+PUT
+PATCH
+DELETE
+Loading
+Error Handling
+Module 9 – Authentication
+Chapter 20
+Login
+Register
+Logout
+JWT
+Local Storage
+Session Storage
+Protected Pages
+Role Based Access
+Module 10 – Context API
+Chapter 21
+Context
+Provider
+Consumer
+useContext
+Global State
+Module 11 – Performance
+Chapter 22
+React.memo
+useMemo
+useCallback
+Lazy Loading
+Suspense
+Code Splitting
+Module 12 – Advanced Hooks
+Chapter 23
+useReducer
+useLayoutEffect
+useImperativeHandle
+useId
+useTransition
+useDeferredValue
+useSyncExternalStore
+Module 13 – State Management
+Chapter 24 – Redux Toolkit
+Redux Basics
+Store
+Slice
+Reducer
+Action
+Dispatch
+Selector
+Async Thunk
+Chapter 25
+Zustand
+Recoil
+Jotai (Introduction)
+Module 14 – TypeScript with React
+Chapter 26
+TypeScript Setup
+Props Types
+State Types
+Event Types
+API Types
+Generic Components
+Module 15 – Forms Library
+Chapter 27
+React Hook Form
+Form Validation
+Yup
+Zod
+Module 16 – Testing
+Chapter 28
+Jest
+React Testing Library
+Unit Tests
+Component Tests
+Module 17 – React Patterns
+Chapter 29
+Compound Components
+Render Props
+Higher Order Components
+Custom Hooks Pattern
+Container/Presentational Pattern
+Module 18 – React + Next.js Preparation
+Chapter 30
+Client Components
+Server Components
+Hydration
+SSR
+SSG
+ISR
+Environment Variables
+API Routes
+Metadata
+Deployment
+Module 19 – Deployment
+Chapter 31
+Vercel
+Netlify
+GitHub Pages
+Build Process
+Environment Variables
+Production Build
+Module 20 – Real Projects
+Chapter 32 – Beginner Projects
+Counter App
+Calculator
+Todo App
+Weather App
+Notes App
+BMI Calculator
+Stopwatch
+Digital Clock
+Chapter 33 – Intermediate Projects
+Expense Tracker
+Movie App
+Quiz App
+Blog App
+Shopping Cart
+Recipe Finder
+Chat UI
+Chapter 34 – Advanced Projects
+Authentication System
+Admin Dashboard
+Employee Management System
+Inventory Management
+Learning Management System (LMS)
+CRM Dashboard
+Kanban Board
+E-commerce Frontend
+Module 21 – Enterprise React
+Chapter 35
+Folder Structure
+Feature-Based Architecture
+SOLID Principles
+Clean Code
+Error Boundaries
+Logging
+Environment Management
+API Layer
+Authentication Flow
+Production Best Practices
+Final Revision
+400+ React Interview Questions
+250+ Practical Coding Exercises
+100 MCQs
+50 Output-Based Questions
+30 Debugging Challenges
+20 React Coding Assignments
+15 Mini Projects
+10 Intermediate Projects
+8 Advanced Projects
+2 Enterprise-Level Capstone Projects

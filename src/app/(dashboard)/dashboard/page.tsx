@@ -51,15 +51,16 @@ export default async function DashboardPage() {
     .eq('user_id', user.id)
     .order('date', { ascending: false })
     .limit(3)
-
-  // 7. Fetch certificates count
   const { count: certCount } = await supabase
     .from('certificates')
     .select('*', { count: 'exact', head: true })
 
-  // 8. Fetch projects count
   const { count: projCount } = await supabase
     .from('projects')
+    .select('*', { count: 'exact', head: true })
+
+  const { count: totalLessonsCount } = await supabase
+    .from('lessons')
     .select('*', { count: 'exact', head: true })
 
   return (
@@ -68,6 +69,7 @@ export default async function DashboardPage() {
       userRole={userRole}
       sessions={sessions || []}
       completedCount={completedProgress?.length || 0}
+      totalLessonsCount={totalLessonsCount || 0}
       finance={finance || null}
       recentJournal={journal || []}
       certCount={certCount || 0}

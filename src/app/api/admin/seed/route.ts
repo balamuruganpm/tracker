@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
 import { seedCurriculum } from '@/lib/supabase/seed-data'
 
 export async function POST(request: Request) {
@@ -7,23 +7,27 @@ export async function POST(request: Request) {
     return new Response('Forbidden', { status: 403 })
   }
 
-  const supabase = await createClient()
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const supabase = createClient(supabaseUrl!, serviceRoleKey!)
 
-  // Verify Admin role
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+  // In development, we can bypass Auth check to seed easily
+  if (process.env.NODE_ENV !== 'development') {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('roles(name)')
-    .eq('id', user.id)
-    .single()
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('roles(name)')
+      .eq('id', user.id)
+      .single()
 
-  const userRole = (profile?.roles as any)?.name || 'Viewer'
-  if (userRole !== 'Admin') {
-    return NextResponse.json({ error: 'Access denied: Admin only' }, { status: 403 })
+    const userRole = (profile?.roles as any)?.name || 'Viewer'
+    if (userRole !== 'Admin') {
+      return NextResponse.json({ error: 'Access denied: Admin only' }, { status: 403 })
+    }
   }
 
   try {

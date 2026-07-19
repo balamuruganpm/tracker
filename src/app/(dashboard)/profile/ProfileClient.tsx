@@ -22,6 +22,7 @@ export default function ProfileClient({ profile, userId, userEmail, userRole }: 
   const [currentCompany, setCurrentCompany] = useState(profile?.current_company || '')
   const [githubUrl, setGithubUrl] = useState(profile?.github_url || '')
   const [linkedinUrl, setLinkedinUrl] = useState(profile?.linkedin_url || '')
+  const [portfolioUrl, setPortfolioUrl] = useState(profile?.portfolio_url || '')
 
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -43,7 +44,8 @@ export default function ProfileClient({ profile, userId, userEmail, userRole }: 
           dream_company: dreamCompany,
           current_company: currentCompany,
           github_url: githubUrl,
-          linkedin_url: linkedinUrl
+          linkedin_url: linkedinUrl,
+          portfolio_url: portfolioUrl
         })
         .eq('id', userId)
 
@@ -141,7 +143,7 @@ export default function ProfileClient({ profile, userId, userEmail, userRole }: 
           </div>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           <div>
             <label className="block text-xs font-semibold text-neutral-500 uppercase">GitHub Profile URL</label>
             <input
@@ -157,6 +159,15 @@ export default function ProfileClient({ profile, userId, userEmail, userRole }: 
               type="url"
               value={linkedinUrl}
               onChange={(e) => setLinkedinUrl(e.target.value)}
+              className="w-full mt-1 rounded-lg border px-3 py-2 text-sm text-neutral-800 outline-none focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-neutral-500 uppercase">Portfolio URL</label>
+            <input
+              type="url"
+              value={portfolioUrl}
+              onChange={(e) => setPortfolioUrl(e.target.value)}
               className="w-full mt-1 rounded-lg border px-3 py-2 text-sm text-neutral-800 outline-none focus:border-blue-500"
             />
           </div>

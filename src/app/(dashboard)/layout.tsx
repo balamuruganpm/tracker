@@ -1,20 +1,18 @@
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
+import MobileNavWrapper from './MobileNavWrapper'
 import { 
   LayoutDashboard, 
   BookOpen, 
-  Compass, 
   Briefcase, 
   Award, 
-  Landmark, 
-  Calendar, 
-  BookText, 
-  Heart, 
-  User, 
+  BarChart2, 
+  Settings, 
   ShieldAlert,
   LogOut,
-  TrendingUp
+  Heart,
+  MessageCircle
 } from 'lucide-react'
 
 interface NavLinkProps {
@@ -50,29 +48,36 @@ export default async function DashboardLayout({
 
   const navLinks: NavLinkProps[] = [
     { href: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard className="h-5 w-5" /> },
-    { href: '/courses', label: 'Learning Roadmap', icon: <BookOpen className="h-5 w-5" /> },
+    { href: '/courses', label: 'Learning', icon: <BookOpen className="h-5 w-5" /> },
     { href: '/projects', label: 'Projects', icon: <Briefcase className="h-5 w-5" /> },
     { href: '/certificates', label: 'Certificates', icon: <Award className="h-5 w-5" /> },
-    { href: '/finance', label: 'Finance', icon: <Landmark className="h-5 w-5" /> },
-    { href: '/timeline', label: 'Timeline', icon: <Calendar className="h-5 w-5" /> },
-    { href: '/journal', label: 'Journal', icon: <BookText className="h-5 w-5" /> },
-    { href: '/journey-together', label: 'Journey Together', icon: <Heart className="h-5 w-5" /> },
-    { href: '/reports', label: 'Reports', icon: <TrendingUp className="h-5 w-5" /> },
-    { href: '/profile', label: 'Profile', icon: <User className="h-5 w-5" /> },
+    { href: '/analytics', label: 'Analytics', icon: <BarChart2 className="h-5 w-5" /> },
+    { href: '/important-dates', label: 'Our Moments', icon: <Heart className="h-5 w-5" /> },
+    { href: '/chat', label: 'Our Chat', icon: <MessageCircle className="h-5 w-5" /> },
+    { href: '/profile', label: 'Settings', icon: <Settings className="h-5 w-5" /> },
   ]
 
   if (userRole === 'Admin') {
     navLinks.push({ href: '/admin', label: 'Admin', icon: <ShieldAlert className="h-5 w-5" /> })
   }
 
+  // Calculate elapsed days
+  const startDate = new Date('2026-07-20T00:00:00')
+  const elapsed = Date.now() - startDate.getTime()
+  const elapsedDays = Math.max(0, Math.floor(elapsed / (1000 * 60 * 60 * 24)))
+  const remainingDays = Math.max(0, 730 - elapsedDays)
+
   return (
-    <div className="flex min-h-screen bg-[#FBFBFB] font-sans antialiased text-neutral-800">
+    <div className="flex min-h-screen bg-slate-50 font-sans antialiased text-slate-800">
       {/* Sidebar for Desktop */}
-      <aside className="fixed inset-y-0 left-0 z-20 hidden w-64 flex-col border-r border-neutral-100 bg-white p-6 md:flex">
+      <aside className="fixed inset-y-0 left-0 z-20 hidden w-64 flex-col border-r border-slate-100 bg-white p-6 md:flex">
         {/* Brand */}
-        <div className="mb-8 flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600"></div>
-          <span className="text-xl font-bold tracking-tight text-neutral-900">Project 730</span>
+        <div className="mb-8 flex flex-col">
+          <div className="flex items-center space-x-2.5">
+            <div className="h-8 w-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 shadow-md shadow-blue-500/20 flex items-center justify-center font-bold text-white text-xs">730</div>
+            <span className="text-xl font-bold tracking-tight text-slate-900">Project 730</span>
+          </div>
+          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1.5 ml-0.5">Focus. Learn. Grow.</span>
         </div>
 
         {/* Navigation Links */}
@@ -81,7 +86,7 @@ export default async function DashboardLayout({
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center space-x-3 rounded-xl px-4 py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 transition-all duration-200"
+              className="flex items-center space-x-3 rounded-xl px-4 py-3 text-sm font-semibold text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-all duration-200"
             >
               {link.icon}
               <span>{link.label}</span>
@@ -89,21 +94,33 @@ export default async function DashboardLayout({
           ))}
         </nav>
 
+        {/* Progress Counter card inside sidebar bottom */}
+        <div className="mb-6 rounded-2xl bg-slate-50/80 border border-slate-100 p-4 space-y-2">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-500 uppercase">
+            <span>Days Remaining</span>
+            <span className="text-blue-600 font-mono">{remainingDays} days</span>
+          </div>
+          <div className="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
+            <div className="h-full bg-blue-600 rounded-full" style={{ width: `${(elapsedDays / 730) * 100}%` }}></div>
+          </div>
+          <p className="text-[10px] font-semibold text-slate-400">Keep going! 💪</p>
+        </div>
+
         {/* User Profile Summary */}
-        <div className="mt-auto border-t border-neutral-100 pt-6">
+        <div className="mt-auto border-t border-slate-100 pt-6">
           <div className="flex items-center space-x-3 mb-4">
-            <div className="h-10 w-10 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center font-bold text-neutral-600">
+            <div className="h-10 w-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-slate-700">
               {userName[0].toUpperCase()}
             </div>
             <div>
-              <p className="text-sm font-semibold text-neutral-900">{userName}</p>
-              <p className="text-xs text-neutral-400 font-medium">{userRole}</p>
+              <p className="text-sm font-semibold text-slate-900">{userName}</p>
+              <p className="text-xs text-slate-400 font-medium">{userRole}</p>
             </div>
           </div>
           <form action="/api/auth/signout" method="POST">
             <button
               type="submit"
-              className="flex w-full items-center space-x-3 rounded-xl px-4 py-3 text-sm font-medium text-red-500 hover:bg-red-50 hover:text-red-600 transition-all duration-200"
+              className="flex w-full items-center space-x-3 rounded-xl px-4 py-3 text-sm font-semibold text-red-500 hover:bg-red-50 hover:text-red-600 transition-all duration-200"
             >
               <LogOut className="h-5 w-5" />
               <span>Log out</span>
@@ -113,21 +130,12 @@ export default async function DashboardLayout({
       </aside>
 
       {/* Main Content Area */}
-      <div className="flex-1 md:pl-64 flex flex-col">
-        {/* Header (Mobile Navigation Toggle placeholder) */}
-        <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-neutral-100 bg-white/80 backdrop-blur-md px-6 md:hidden">
-          <div className="flex items-center space-x-2">
-            <div className="h-6 w-6 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600"></div>
-            <span className="font-bold tracking-tight text-neutral-900">Project 730</span>
-          </div>
-          {/* Mobile Profile Link */}
-          <Link href="/profile" className="h-8 w-8 rounded-full bg-neutral-100 flex items-center justify-center font-bold text-neutral-600 text-xs">
-            {userName[0].toUpperCase()}
-          </Link>
-        </header>
+      <div className="flex-1 md:pl-64 flex flex-col min-h-screen">
+        {/* Dynamic Mobile Header, Bottom Bar, & Drawer */}
+        <MobileNavWrapper userName={userName} userRole={userRole} navLinks={navLinks} />
 
         {/* Page Content */}
-        <main className="flex-grow p-6 md:p-10 max-w-7xl mx-auto w-full">
+        <main className="flex-grow p-6 md:p-10 max-w-7xl mx-auto w-full pb-24 md:pb-10">
           {children}
         </main>
       </div>

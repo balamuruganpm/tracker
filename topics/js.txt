@@ -1,0 +1,354 @@
+JavaScript Master Course (0 → Advanced)
+Module 1 – JavaScript Fundamentals
+Chapter 1 – Introduction to JavaScript
+What is JavaScript?
+History of JavaScript
+JavaScript vs ECMAScript
+JavaScript Engine (V8, SpiderMonkey)
+Browser vs Node.js
+How JavaScript Works
+JavaScript Applications
+JavaScript Versions (ES5–ES2024)
+Chapter 2 – Environment Setup
+Install VS Code
+Install Node.js
+Browser DevTools
+Console
+First JavaScript Program
+Running JS in Browser
+Running JS with Node.js
+Code Editor Tips
+Chapter 3 – Variables
+What are Variables?
+var
+let
+const
+Naming Rules
+Scope
+Hoisting
+Best Practices
+Chapter 4 – Data Types
+Primitive Types
+String
+Number
+Boolean
+Undefined
+Null
+Symbol
+BigInt
+typeof Operator
+Dynamic Typing
+Chapter 5 – Operators
+Arithmetic Operators
+Assignment Operators
+Comparison Operators
+Logical Operators
+Bitwise Operators
+Unary Operators
+Ternary Operator
+Nullish Coalescing
+Optional Chaining
+Chapter 6 – Type Conversion
+Implicit Conversion
+Explicit Conversion
+String Conversion
+Number Conversion
+Boolean Conversion
+Truthy & Falsy
+NaN
+Infinity
+Module 2 – Control Flow
+Chapter 7 – Conditional Statements
+if
+else
+else if
+Nested if
+switch
+Ternary
+Best Practices
+Chapter 8 – Loops
+for
+while
+do while
+Nested Loops
+break
+continue
+Labels
+Chapter 9 – Functions
+Function Basics
+Parameters
+Arguments
+Return
+Default Parameters
+Rest Parameters
+Function Expressions
+Anonymous Functions
+Arrow Functions
+Callback Functions
+Higher Order Functions
+Pure Functions
+Module 3 – Strings
+Chapter 10 – Strings
+String Basics
+Template Literals
+Escape Characters
+String Methods
+Searching
+Slicing
+Replacing
+Splitting
+Joining
+Regular Expressions Basics
+Module 4 – Arrays
+Chapter 11 – Arrays
+Creating Arrays
+Access Elements
+Update Elements
+Loop Arrays
+Array Methods
+push()
+pop()
+shift()
+unshift()
+splice()
+slice()
+concat()
+sort()
+reverse()
+Chapter 12 – Advanced Arrays
+map()
+filter()
+reduce()
+find()
+findIndex()
+some()
+every()
+includes()
+indexOf()
+flat()
+flatMap()
+Module 5 – Objects
+Chapter 13 – Objects
+Object Basics
+Properties
+Methods
+Dot Notation
+Bracket Notation
+Object.keys()
+Object.values()
+Object.entries()
+Spread Operator
+Object Destructuring
+Chapter 14 – JSON
+JSON Introduction
+JSON.parse()
+JSON.stringify()
+API JSON
+Local Storage JSON
+Module 6 – DOM
+Chapter 15 – DOM Introduction
+DOM Tree
+Selecting Elements
+querySelector()
+querySelectorAll()
+getElementById()
+getElementsByClassName()
+Chapter 16 – DOM Manipulation
+innerHTML
+textContent
+innerText
+Attributes
+Styles
+Classes
+Create Elements
+Remove Elements
+Replace Elements
+Chapter 17 – Events
+Click
+Input
+Change
+Submit
+Mouse Events
+Keyboard Events
+Event Bubbling
+Event Capturing
+Event Delegation
+Module 7 – Advanced Functions
+Chapter 18
+Closures
+Lexical Scope
+IIFE
+this Keyword
+bind()
+call()
+apply()
+Module 8 – Asynchronous JavaScript
+Chapter 19
+Synchronous
+Asynchronous
+Callback
+Callback Hell
+Chapter 20
+Promises
+Promise States
+then()
+catch()
+finally()
+Promise.all()
+Promise.race()
+Promise.any()
+Chapter 21
+async
+await
+Error Handling
+try
+catch
+finally
+Module 9 – Browser APIs
+Chapter 22
+fetch()
+HTTP Methods
+Headers
+Response
+Request
+JSON APIs
+CRUD Operations
+Chapter 23
+Local Storage
+Session Storage
+Cookies
+Module 10 – Error Handling
+Chapter 24
+try
+catch
+throw
+finally
+Custom Errors
+Module 11 – ES6+
+Chapter 25
+let
+const
+Arrow Functions
+Template Literals
+Destructuring
+Spread
+Rest
+Modules
+Classes
+Chapter 26
+import
+export
+Named Export
+Default Export
+Dynamic Import
+Module 12 – Object-Oriented Programming
+Chapter 27
+Classes
+Objects
+Constructors
+Inheritance
+Encapsulation
+Polymorphism
+Static Methods
+Getters
+Setters
+Module 13 – Advanced JavaScript
+Chapter 28
+Map
+Set
+WeakMap
+WeakSet
+Chapter 29
+Generators
+Iterators
+Iterable Protocol
+Chapter 30
+Proxy
+Reflect
+Symbols
+BigInt
+Intl API
+Module 14 – Performance
+Chapter 31
+Debounce
+Throttle
+Memoization
+Lazy Loading
+Code Splitting
+Module 15 – JavaScript in the Browser
+Chapter 32
+Timers
+setTimeout()
+setInterval()
+requestAnimationFrame()
+Chapter 33
+Geolocation
+Clipboard
+Notifications
+Web Workers
+Module 16 – Debugging
+Chapter 34
+Chrome DevTools
+Breakpoints
+Console
+Network
+Performance
+Module 17 – Design Patterns
+Chapter 35
+Module Pattern
+Singleton
+Factory
+Observer
+MVC Basics
+Module 18 – Testing
+Chapter 36
+Unit Testing
+Jest Basics
+Assertions
+Mock Functions
+Module 19 – Build Tools
+Chapter 37
+npm
+package.json
+npx
+Vite
+Babel
+Webpack (Introduction)
+Module 20 – Real Projects
+Chapter 38 – Beginner Projects
+Calculator
+To-Do App
+Stopwatch
+Counter
+Digital Clock
+Random Password Generator
+BMI Calculator
+Notes App
+Chapter 39 – Intermediate Projects
+Weather App
+Quiz App
+Expense Tracker
+Movie Search
+Shopping Cart
+Chat UI
+Blog Application
+Chapter 40 – Advanced Projects
+Kanban Board
+E-commerce Frontend
+Authentication System
+Admin Dashboard
+Employee Management System
+LMS Dashboard
+CRM Dashboard
+Final Revision
+500+ Interview Questions
+300+ Coding Challenges
+100 MCQs
+50 Output-Based Questions
+20 Debugging Exercises
+10 Mock Interviews
+15 Mini Projects
+10 Intermediate Projects
+7 Advanced Projects
+1 Enterprise-Level Capstone Project
+

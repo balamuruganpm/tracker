@@ -1,0 +1,337 @@
+Microsoft Identity & DevOps
+Microsoft Entra ID (Azure AD) Master Course
+Module 1 – Introduction
+Chapter 1
+What is Microsoft Entra ID?
+Azure AD vs Windows Active Directory
+Microsoft Identity Platform
+Microsoft 365 Identity
+Authentication vs Authorization
+Identity Concepts
+Licensing
+Real-world Use Cases
+Module 2 – Tenant Management
+Chapter 2
+Create Tenant
+Tenant Configuration
+Custom Domains
+Branding
+Tenant Settings
+Administrative Units
+Multiple Tenants
+Tenant Security
+Module 3 – Users & Groups
+Chapter 3
+Users
+Guest Users
+Groups
+Microsoft 365 Groups
+Security Groups
+Dynamic Groups
+Administrative Roles
+User Management
+Module 4 – Authentication
+Chapter 4
+Password Authentication
+Passwordless Authentication
+MFA
+Conditional Access
+Identity Protection
+Authentication Methods
+Self-Service Password Reset
+Password Policies
+Module 5 – App Registration
+Chapter 5
+Register Application
+Client ID
+Tenant ID
+Client Secret
+Certificates
+Redirect URI
+API Permissions
+Admin Consent
+Module 6 – OAuth & OpenID Connect
+Chapter 6
+OAuth 2.0
+OpenID Connect
+JWT Tokens
+Access Tokens
+Refresh Tokens
+ID Tokens
+Authorization Code Flow
+Client Credentials Flow
+PKCE
+Module 7 – Microsoft Graph Permissions
+Chapter 7
+Delegated Permissions
+Application Permissions
+Consent
+Graph Authentication
+Token Validation
+Permission Management
+Module 8 – Enterprise Security
+Chapter 8
+Conditional Access
+Identity Governance
+Privileged Identity Management (PIM)
+Access Reviews
+Security Best Practices
+Audit Logs
+Module 9 – Enterprise Projects
+Chapter 9
+Login System
+SSO
+Microsoft Login Integration
+Enterprise Authentication
+Secure API Access
+Power BI (Basic) Master Course
+Module 1 – Introduction
+Chapter 1
+What is Power BI?
+Power BI Components
+Desktop
+Service
+Mobile
+Report vs Dashboard
+Licensing
+Module 2 – Installation
+Chapter 2
+Install Power BI Desktop
+Interface
+Workspace
+File Types
+Data Sources
+Module 3 – Data Loading
+Chapter 3
+Excel
+CSV
+SQL Server
+SharePoint
+Dataverse
+Web API
+Folder Data
+Module 4 – Data Transformation
+Chapter 4
+Power Query
+Clean Data
+Remove Duplicates
+Merge Queries
+Append Queries
+Split Columns
+Pivot
+Unpivot
+Module 5 – Data Modeling
+Chapter 5
+Relationships
+Star Schema
+Snowflake Schema
+Calculated Columns
+Measures
+Hierarchies
+Module 6 – DAX Basics
+Chapter 6
+SUM
+AVERAGE
+COUNT
+CALCULATE
+FILTER
+IF
+SWITCH
+RELATED
+LOOKUPVALUE
+Module 7 – Visualizations
+Chapter 7
+Cards
+Tables
+Matrix
+Pie Charts
+Bar Charts
+Line Charts
+Maps
+KPI
+Slicers
+Module 8 – Publishing
+Chapter 8
+Publish Reports
+Dashboards
+Workspaces
+Sharing
+Scheduled Refresh
+Security
+Module 9 – Enterprise Projects
+Chapter 9
+HR Dashboard
+Sales Dashboard
+Employee Dashboard
+Finance Dashboard
+Project Dashboard
+Azure Fundamentals (AZ-900) Master Course
+Module 1 – Introduction
+Chapter 1
+What is Azure?
+Cloud Computing
+Public Cloud
+Private Cloud
+Hybrid Cloud
+Azure Global Infrastructure
+Module 2 – Azure Core Services
+Chapter 2
+Virtual Machines
+Storage
+Networking
+App Services
+Azure Functions
+Containers
+Module 3 – Networking
+Chapter 3
+VNets
+NSG
+Load Balancer
+VPN Gateway
+DNS
+ExpressRoute
+Module 4 – Storage
+Chapter 4
+Blob Storage
+File Storage
+Queue Storage
+Table Storage
+Storage Accounts
+Module 5 – Security
+Chapter 5
+Microsoft Defender
+Azure Firewall
+Key Vault
+Backup
+Security Center
+Module 6 – Identity
+Chapter 6
+Microsoft Entra ID
+RBAC
+MFA
+Conditional Access
+Identity Management
+Module 7 – Monitoring
+Chapter 7
+Azure Monitor
+Log Analytics
+Application Insights
+Alerts
+Metrics
+Module 8 – Pricing
+Chapter 8
+Cost Management
+Pricing Calculator
+Azure Advisor
+Budgets
+Cost Optimization
+Module 9 – Certification Prep
+Chapter 9
+AZ-900 Exam Objectives
+Practice Questions
+Mock Tests
+Case Studies
+Revision
+Azure DevOps (Basic) Master Course
+Module 1 – Introduction
+Chapter 1
+What is Azure DevOps?
+DevOps Lifecycle
+Azure DevOps Services
+Organizations
+Projects
+Users
+Roles
+Module 2 – Azure Repos
+Chapter 2
+Git Basics
+Branches
+Merge
+Pull Request
+Repository Management
+Code Review
+Module 3 – Azure Boards
+Chapter 3
+Work Items
+User Stories
+Tasks
+Bugs
+Sprint Planning
+Kanban Board
+Module 4 – Azure Pipelines
+Chapter 4
+CI/CD
+YAML Pipelines
+Build Pipeline
+Release Pipeline
+Variables
+Artifacts
+Module 5 – Azure Test Plans
+Chapter 5
+Test Cases
+Test Suites
+Manual Testing
+Bug Tracking
+Test Execution
+Module 6 – Azure Artifacts
+Chapter 6
+Package Management
+npm Packages
+NuGet
+Maven
+Universal Packages
+Module 7 – Deployment
+Chapter 7
+Deployment Slots
+Web App Deployment
+Environment Management
+Release Approval
+Rollback
+Module 8 – Monitoring
+Chapter 8
+Dashboards
+Reports
+Analytics
+Notifications
+Security
+Module 9 – Enterprise Projects
+Chapter 9
+React CI/CD
+Next.js Deployment
+SPFx Deployment Pipeline
+Microsoft 365 CI/CD
+Enterprise Release Management
+Final Microsoft Learning Roadmap
+1. Frontend Development
+HTML
+CSS
+JavaScript
+React
+TypeScript
+Next.js
+2. Microsoft 365 Development
+SharePoint Online
+SPFx
+PnP JS
+Microsoft Graph API
+3. Power Platform
+Power Apps
+Power Automate Cloud
+Power Automate Desktop
+Dataverse
+4. Microsoft Identity & DevOps
+Microsoft Entra ID (Azure AD)
+Power BI (Basic)
+Azure Fundamentals (AZ-900)
+Azure DevOps (Basic)
+5. Capstone Projects
+Microsoft 365 Employee Portal
+HR Management System
+Learning Management System (LMS)
+Enterprise Intranet Portal
+Project 730 (Your Personal Growth Tracker)
+Leave Management System
+Asset Management System
+Employee Self-Service Portal
+Help Desk Ticketing System
+Complete Microsoft 365 Enterprise Portal

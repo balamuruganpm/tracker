@@ -153,32 +153,79 @@ export default function FinanceClient({ ledger: initialLedger, userRole, userId 
 
               {showForm && (
                 <form onSubmit={handleInsert} className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-500 uppercase">Salary</label>
-                    <input
-                      type="number"
-                      value={salary}
-                      onChange={(e) => setSalary(e.target.value)}
-                      className="w-full mt-1 rounded-lg border px-3 py-2 text-sm text-neutral-800 outline-none focus:border-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-500 uppercase">Savings</label>
-                    <input
-                      type="number"
-                      value={savings}
-                      onChange={(e) => setSavings(e.target.value)}
-                      className="w-full mt-1 rounded-lg border px-3 py-2 text-sm text-neutral-800 outline-none focus:border-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-neutral-500 uppercase">Debt</label>
-                    <input
-                      type="number"
-                      value={debt}
-                      onChange={(e) => setDebt(e.target.value)}
-                      className="w-full mt-1 rounded-lg border px-3 py-2 text-sm text-neutral-800 outline-none focus:border-blue-500"
-                    />
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Salary (₹)</label>
+                      <input
+                        type="number"
+                        value={salary}
+                        onChange={(e) => setSalary(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Savings (₹)</label>
+                      <input
+                        type="number"
+                        value={savings}
+                        onChange={(e) => setSavings(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Debt (₹)</label>
+                      <input
+                        type="number"
+                        value={debt}
+                        onChange={(e) => setDebt(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Monthly Savings (₹)</label>
+                      <input
+                        type="number"
+                        value={monthlySavings}
+                        onChange={(e) => setMonthlySavings(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Investment (₹)</label>
+                      <input
+                        type="number"
+                        value={investment}
+                        onChange={(e) => setInvestment(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Emergency Fund (₹)</label>
+                      <input
+                        type="number"
+                        value={emergencyFund}
+                        onChange={(e) => setEmergencyFund(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Target Salary (₹)</label>
+                      <input
+                        type="number"
+                        value={targetSalary}
+                        onChange={(e) => setTargetSalary(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 uppercase">Target Savings (₹)</label>
+                      <input
+                        type="number"
+                        value={targetSavings}
+                        onChange={(e) => setTargetSavings(e.target.value)}
+                        className="w-full mt-1 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-500 bg-white"
+                      />
+                    </div>
                   </div>
                   <button
                     type="submit"

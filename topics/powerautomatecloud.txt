@@ -1,0 +1,273 @@
+Power Automate Cloud Master Course (Beginner → Enterprise)
+Module 1 – Introduction to Power Automate
+Chapter 1 – Fundamentals
+What is Power Automate?
+Microsoft Power Platform
+Cloud Flow vs Desktop Flow
+Types of Flows
+Business Process Flows
+Licensing
+Power Automate Portal
+Real-world Use Cases
+Flow Lifecycle
+Best Practices
+Module 2 – Environment Setup
+Chapter 2
+Microsoft 365 Environment
+Power Platform Environment
+Solutions
+Connections
+Connectors
+Connection References
+Environment Variables
+Security Roles
+Module 3 – Flow Types
+Chapter 3
+Automated Cloud Flow
+Instant Cloud Flow
+Scheduled Cloud Flow
+Business Process Flow
+Child Flow
+Solution-aware Flow
+Module 4 – Flow Designer
+Chapter 4
+Designer Overview
+Trigger
+Action
+Dynamic Content
+Expressions
+Variables
+Compose
+Comments
+Run History
+Flow Checker
+Module 5 – Variables & Data Types
+Chapter 5
+String
+Integer
+Float
+Boolean
+Array
+Object
+Initialize Variable
+Set Variable
+Append Variable
+Increment Variable
+Module 6 – Expressions
+Chapter 6
+concat()
+if()
+equals()
+contains()
+empty()
+length()
+substring()
+replace()
+formatDateTime()
+utcNow()
+Module 7 – Conditions & Loops
+Chapter 7
+Condition
+Switch
+Apply to Each
+Do Until
+Parallel Branch
+Scope
+Configure Run After
+Terminate
+Module 8 – SharePoint Connector
+Chapter 8
+Create Item
+Get Item
+Get Items
+Update Item
+Delete Item
+Attachments
+Libraries
+File Metadata
+Permissions
+Triggers
+Module 9 – Outlook Connector
+Chapter 9
+Send Email
+Read Email
+Create Draft
+Calendar Events
+Contacts
+Mail Attachments
+Meeting Invitations
+Automatic Replies
+Module 10 – Microsoft Teams
+Chapter 10
+Send Message
+Adaptive Cards
+Teams Channel
+Team Members
+Approvals
+Notifications
+Mentions
+Chat Messages
+Module 11 – Excel
+Chapter 11
+Read Excel
+Write Excel
+Create Table
+Update Row
+Delete Row
+Filter Rows
+OneDrive Excel
+SharePoint Excel
+Module 12 – OneDrive
+Chapter 12
+Create File
+Read File
+Update File
+Delete File
+Move File
+Copy File
+Share File
+Folder Operations
+Module 13 – Approvals
+Chapter 13
+Approval Flow
+Start Approval
+Wait for Approval
+Multiple Approvers
+Approval History
+Escalation
+Rejection Handling
+Reminder Emails
+Module 14 – Dataverse
+Chapter 14
+Create Row
+Read Row
+Update Row
+Delete Row
+Relationships
+Choices
+Alternate Keys
+Business Rules
+Module 15 – HTTP Actions
+Chapter 15
+HTTP Request
+HTTP Response
+REST API
+Authentication
+Headers
+JSON Body
+Parse JSON
+Error Handling
+Module 16 – JSON
+Chapter 16
+Parse JSON
+Generate Schema
+Arrays
+Objects
+Nested Objects
+Dynamic JSON
+Module 17 – Error Handling
+Chapter 17
+Try/Catch Pattern
+Scope
+Configure Run After
+Retry Policy
+Timeout
+Logging
+Notifications
+Exception Flow
+Module 18 – AI Builder
+Chapter 18
+AI Builder
+Form Processing
+Text Recognition
+Predictions
+AI Prompts
+Document Processing
+Module 19 – Child Flows
+Chapter 19
+Create Child Flow
+Pass Parameters
+Return Values
+Modular Automation
+Reusability
+Error Handling
+Module 20 – Solution Management
+Chapter 20
+Solutions
+Managed Solutions
+Unmanaged Solutions
+Export
+Import
+Versioning
+Deployment
+ALM
+Module 21 – Security
+Chapter 21
+User Roles
+Flow Ownership
+Sharing
+Connection Security
+DLP Policies
+Governance
+Audit Logs
+Compliance
+Module 22 – Performance
+Chapter 22
+Parallel Execution
+Pagination
+Batch Processing
+Concurrency Control
+Trigger Conditions
+Performance Optimization
+Monitoring
+Analytics
+Module 23 – Integration
+Chapter 23
+SharePoint
+Power Apps
+Microsoft Graph
+SQL Server
+Azure Functions
+SAP
+Salesforce
+Custom Connectors
+Module 24 – Enterprise Architecture
+Chapter 24
+Naming Conventions
+Folder Structure
+Reusable Child Flows
+Environment Variables
+Logging
+Error Handling
+Monitoring
+Governance
+Module 25 – Real Projects
+Chapter 25 – Beginner Projects
+Leave Approval Workflow
+Email Notification System
+File Backup Automation
+Birthday Reminder
+Task Reminder
+Chapter 26 – Intermediate Projects
+Employee Onboarding Workflow
+Invoice Approval Process
+Document Approval System
+Help Desk Automation
+Attendance Notification
+Chapter 27 – Enterprise Projects
+HR Automation Platform
+Purchase Approval Workflow
+Contract Management
+Employee Exit Process
+Learning Management Automation
+Enterprise Document Approval System
+Final Revision
+250+ Power Automate Interview Questions
+200+ Flow Design Exercises
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Exercises
+15 Assignments
+10 Beginner Flows
+5 Intermediate Automations
+5 Enterprise Workflow Projects

@@ -1,0 +1,221 @@
+Microsoft Dataverse Master Course (Beginner → Enterprise)
+Module 1 – Introduction to Dataverse
+Chapter 1 – Dataverse Fundamentals
+What is Dataverse?
+Why Dataverse?
+Dataverse vs SQL Server
+Dataverse vs SharePoint Lists
+Dataverse vs Excel
+Dataverse Architecture
+Licensing
+Use Cases
+Benefits
+Best Practices
+Module 2 – Environment Setup
+Chapter 2
+Power Platform Environment
+Dataverse Environment
+Solutions
+Environment Variables
+Tables Overview
+Security
+Backup & Restore
+Monitoring
+Module 3 – Tables
+Chapter 3
+Standard Tables
+Custom Tables
+Table Properties
+Primary Name Column
+Primary Key
+Ownership
+Activity Tables
+Virtual Tables
+Module 4 – Columns
+Chapter 4
+Text
+Number
+Currency
+Date & Time
+Yes/No
+Choice
+Multi-select Choice
+Lookup
+Image
+File
+Auto Number
+Formula Columns
+Rollup Columns
+Module 5 – Relationships
+Chapter 5
+One-to-One
+One-to-Many
+Many-to-Many
+Lookup Columns
+Cascade Rules
+Referential Integrity
+Self Relationships
+Relationship Behavior
+Module 6 – CRUD Operations
+Chapter 6
+Create Record
+Read Record
+Update Record
+Delete Record
+Bulk Operations
+Batch Updates
+Import Data
+Export Data
+Module 7 – Forms & Views
+Chapter 7
+Main Form
+Quick Create Form
+Quick View Form
+Card Form
+Editable Grid
+Views
+Charts
+Dashboards
+Module 8 – Business Rules
+Chapter 8
+Business Rules
+Field Validation
+Show/Hide Fields
+Lock Fields
+Set Default Values
+Recommendations
+Scope
+Error Messages
+Module 9 – Choices
+Chapter 9
+Local Choices
+Global Choices
+Multi-select Choices
+Managing Choices
+Best Practices
+Module 10 – Security
+Chapter 10
+Users
+Teams
+Business Units
+Security Roles
+Column Security
+Record Security
+Ownership
+Sharing Records
+Module 11 – Power Apps Integration
+Chapter 11
+Connect Dataverse
+CRUD
+Galleries
+Forms
+Patch()
+Filter()
+Search()
+Lookup()
+Module 12 – Power Automate Integration
+Chapter 12
+Dataverse Trigger
+Create Row
+Update Row
+Delete Row
+List Rows
+Change Tracking
+Transactions
+Business Process Flows
+Module 13 – API & SDK
+Chapter 13
+Dataverse Web API
+REST API
+OData
+CRUD
+Batch Requests
+Authentication
+SDK Basics
+Custom API
+Module 14 – Plugins & Automation
+Chapter 14
+Plugin Basics
+Custom Actions
+Workflows
+Events
+Pipelines
+Validation
+Logging
+Exception Handling
+Module 15 – Data Import & Export
+Chapter 15
+Excel Import
+CSV Import
+Dataflows
+Bulk Delete
+Duplicate Detection
+Data Migration
+Module 16 – Performance
+Chapter 16
+Alternate Keys
+Indexes
+Query Optimization
+Pagination
+Performance Monitoring
+Best Practices
+Module 17 – ALM
+Chapter 17
+Managed Solutions
+Unmanaged Solutions
+Export
+Import
+Versioning
+Pipelines
+Dev/Test/Production
+Environment Variables
+Module 18 – Enterprise Architecture
+Chapter 18
+Naming Standards
+Table Design
+Relationship Design
+Solution Structure
+Security Strategy
+Governance
+Backup Strategy
+Monitoring
+Module 19 – Integration
+Chapter 19
+Power Apps
+Power Automate
+SPFx
+Microsoft Graph
+Azure Functions
+SQL Server
+SharePoint
+Power BI
+Module 20 – Real Projects
+Chapter 20 – Beginner Projects
+Student Management System
+Employee Directory
+Contact Manager
+Inventory List
+Expense Tracker
+Chapter 21 – Intermediate Projects
+Leave Management
+Help Desk System
+Asset Management
+CRM Lite
+Project Tracker
+Chapter 22 – Enterprise Projects
+HR Management System
+Learning Management System
+Employee Portal
+Sales CRM
+Project Management Platform
+Enterprise Asset Management
+Final Revision
+200+ Dataverse Interview Questions
+150+ Practical Exercises
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Exercises
+15 Assignments
+10 Beginner Projects
+5 Intermediate Projects
+5 Enterprise Projects

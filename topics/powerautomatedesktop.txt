@@ -1,0 +1,267 @@
+Power Automate Desktop Master Course (Beginner → Enterprise)
+Module 1 – Introduction to Power Automate Desktop
+Chapter 1 – Fundamentals
+What is Power Automate Desktop?
+RPA (Robotic Process Automation)
+Cloud Flow vs Desktop Flow
+Attended vs Unattended Automation
+Microsoft Power Platform
+PAD Architecture
+Licensing
+Installation
+Desktop Console
+Best Practices
+Module 2 – Environment Setup
+Chapter 2
+Install PAD
+Machine Setup
+Connect Machine
+Desktop Console
+Power Automate Portal
+Machine Groups
+Gateway
+First Desktop Flow
+Module 3 – Flow Designer
+Chapter 3
+Interface Overview
+Actions Pane
+Variables Pane
+Flow Variables
+Subflows
+Error Pane
+Recorder
+Flow Properties
+Run Flow
+Debug Flow
+Module 4 – Variables
+Chapter 4
+Text Variables
+Number Variables
+Boolean Variables
+Date Variables
+List Variables
+Dictionary Variables
+Custom Objects
+Variable Scope
+Module 5 – Flow Control
+Chapter 5
+If
+Else
+Switch
+Loop
+For Each
+While
+Repeat
+Break
+Continue
+Labels
+Module 6 – Text Automation
+Chapter 6
+Text Variables
+Replace Text
+Split Text
+Trim
+Regex
+String Functions
+Encoding
+Text Formatting
+Module 7 – File Management
+Chapter 7
+Create File
+Read File
+Write File
+Copy File
+Move File
+Rename File
+Delete File
+Monitor Folder
+Zip Files
+Unzip Files
+Module 8 – Folder Automation
+Chapter 8
+Create Folder
+Rename Folder
+Delete Folder
+Copy Folder
+Move Folder
+Folder Search
+Folder Metadata
+Directory Operations
+Module 9 – Excel Automation
+Chapter 9
+Launch Excel
+Open Workbook
+Create Workbook
+Read Cell
+Write Cell
+Read Range
+Write Range
+Find Data
+Filter Data
+Save Workbook
+Close Workbook
+Charts
+Tables
+Pivot Tables
+Formatting
+Module 10 – Browser Automation
+Chapter 10
+Launch Browser
+Attach Browser
+Navigate URL
+Click Elements
+Input Text
+Extract Data
+Download Files
+Upload Files
+Browser Recorder
+Web Forms
+Module 11 – UI Automation
+Chapter 11
+Desktop Recorder
+UI Elements
+Mouse Actions
+Keyboard Actions
+Window Management
+Click Controls
+Wait Actions
+Focus Window
+Image Recognition
+OCR Basics
+Module 12 – PDF Automation
+Chapter 12
+Read PDF
+Extract Text
+Merge PDFs
+Split PDFs
+Password Protection
+OCR PDF
+PDF Forms
+Save PDF
+Module 13 – Email Automation
+Chapter 13
+Outlook
+Gmail
+Send Email
+Read Email
+Download Attachments
+Delete Email
+Move Email
+Search Email
+Module 14 – Database Automation
+Chapter 14
+SQL Server
+MySQL
+SQLite
+Execute Query
+Read Data
+Insert Data
+Update Data
+Delete Data
+Module 15 – Clipboard Automation
+Chapter 15
+Copy
+Paste
+Clipboard Text
+Clipboard Images
+Clipboard Files
+Module 16 – System Automation
+Chapter 16
+Launch Application
+Close Application
+Kill Process
+Start Process
+Command Prompt
+PowerShell
+Windows Services
+Registry Basics
+Module 17 – Error Handling
+Chapter 17
+Begin Error Block
+End Error Block
+Exception Handling
+Retry Logic
+Logging
+Screenshots on Failure
+Notifications
+Recovery Flows
+Module 18 – OCR & AI
+Chapter 18
+OCR Engine
+Extract Text
+Image Recognition
+AI Builder Integration
+Form Processing
+Invoice Processing
+Module 19 – Desktop Flow Integration
+Chapter 19
+Trigger from Cloud Flow
+Input Parameters
+Output Parameters
+Child Flows
+Machine Runtime
+Scheduling
+Module 20 – SAP Automation
+Chapter 20
+SAP Recorder
+SAP Login
+SAP Navigation
+SAP Data Entry
+SAP Extraction
+SAP Automation Best Practices
+Module 21 – Security
+Chapter 21
+Credentials
+Secure Variables
+Windows Credential Manager
+Sensitive Data
+Encryption
+Audit Logs
+Module 22 – Performance
+Chapter 22
+Flow Optimization
+Efficient Loops
+Memory Usage
+UI Synchronization
+Parallel Processing
+Performance Monitoring
+Module 23 – Enterprise Architecture
+Chapter 23
+Naming Conventions
+Reusable Subflows
+Modular Design
+Logging Framework
+Configuration Files
+Environment Variables
+Deployment
+Governance
+Module 24 – Real Projects
+Chapter 24 – Beginner Projects
+Auto Rename Files
+Excel Data Entry
+PDF Text Extractor
+Folder Backup
+Email Attachment Downloader
+Chapter 25 – Intermediate Projects
+Invoice Processing
+Excel Report Generator
+HR Resume Parser
+Daily File Synchronization
+Browser Data Scraper
+Chapter 26 – Enterprise Projects
+Employee Onboarding Automation
+Accounts Payable Automation
+SAP Invoice Entry Automation
+End-to-End Report Generation
+Desktop RPA with Cloud Flow Integration
+Enterprise Document Processing System
+Final Revision
+250+ Power Automate Desktop Interview Questions
+200+ Automation Exercises
+100 MCQs
+50 Scenario-Based Questions
+20 Debugging Exercises
+15 Assignments
+10 Beginner Desktop Flows
+5 Intermediate RPA Projects
+5 Enterprise Automation Projects

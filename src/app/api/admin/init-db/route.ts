@@ -8,6 +8,9 @@ export async function POST(request: Request) {
     return new Response('Forbidden', { status: 403 })
   }
 
+  // Bypass self-signed certificate verification
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+
   const connectionString = process.env.POSTGRES_URL_NON_POOLING || process.env.POSTGRES_PRISMA_URL
   if (!connectionString) {
     return NextResponse.json({ error: 'Missing database connection string' }, { status: 500 })
