@@ -93,27 +93,79 @@ export default function LoginPage() {
         </form>
 
         {process.env.NODE_ENV === 'development' && (
-          <div className="border-t border-neutral-100 pt-6 text-center">
-            <button
-              onClick={async () => {
-                setLoading(true)
-                setError(null)
-                try {
-                  const res = await fetch('/api/admin/seed-users', { method: 'POST' })
-                  const data = await res.json()
-                  if (data.error) throw new Error(data.error)
-                  alert('Users initialized successfully! You can now log in using "bala" and "sudha".')
-                } catch (err: any) {
-                  setError(err.message)
-                } finally {
-                  setLoading(false)
-                }
-              }}
-              disabled={loading}
-              className="text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors"
-            >
-              Initialize Database Users
-            </button>
+          <div className="border-t border-neutral-100 pt-6 space-y-3">
+            <p className="text-xs font-semibold text-neutral-500 text-center">Development Tools</p>
+            <div className="grid grid-cols-1 gap-2">
+              <button
+                onClick={async () => {
+                  setLoading(true)
+                  setError(null)
+                  try {
+                    const res = await fetch('/api/admin/init-db', { method: 'POST' })
+                    const data = await res.json()
+                    if (data.error) throw new Error(data.error)
+                    alert('Database schema & tables initialized successfully!')
+                  } catch (err: any) {
+                    setError(err.message)
+                  } finally {
+                    setLoading(false)
+                  }
+                }}
+                disabled={loading}
+                className="w-full rounded-lg border border-neutral-200 bg-white py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors disabled:opacity-50"
+              >
+                1. Initialize Tables & Schema
+              </button>
+
+              <button
+                onClick={async () => {
+                  setLoading(true)
+                  setError(null)
+                  try {
+                    const res = await fetch('/api/admin/seed-users', { method: 'POST' })
+                    const data = await res.json()
+                    if (data.error) throw new Error(data.error)
+                    alert('Default users (bala & sudha) created successfully!')
+                  } catch (err: any) {
+                    setError(err.message)
+                  } finally {
+                    setLoading(false)
+                  }
+                }}
+                disabled={loading}
+                className="w-full rounded-lg border border-neutral-200 bg-white py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors disabled:opacity-50"
+              >
+                2. Seed Default Users
+              </button>
+
+              <button
+                onClick={async () => {
+                  setLoading(true)
+                  setError(null)
+                  try {
+                    // Log in temporarily as admin to seed curriculum if needed, or trigger API directly if it bypassed auth (wait, seed route requires admin user session in cookie/auth header)
+                    // Wait, let's just alert the user to log in first and then seed from admin page, or attempt to seed.
+                    const res = await fetch('/api/admin/seed', { method: 'POST' })
+                    const data = await res.json()
+                    if (data.error) {
+                      if (data.error === 'Unauthorized' || data.error.includes('denied')) {
+                        throw new Error('Please log in first as "bala" (Admin) to seed the curriculum.')
+                      }
+                      throw new Error(data.error)
+                    }
+                    alert('Curriculum data seeded successfully!')
+                  } catch (err: any) {
+                    setError(err.message)
+                  } finally {
+                    setLoading(false)
+                  }
+                }}
+                disabled={loading}
+                className="w-full rounded-lg border border-neutral-200 bg-white py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors disabled:opacity-50"
+              >
+                3. Seed Curriculum Courses
+              </button>
+            </div>
           </div>
         )}
       </div>
